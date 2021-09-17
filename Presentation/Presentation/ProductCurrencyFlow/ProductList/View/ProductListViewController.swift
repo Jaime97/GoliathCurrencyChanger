@@ -13,6 +13,9 @@ class ProductListViewController: UIViewController {
     
     @IBOutlet weak var productTableView: UITableView!
     @IBOutlet weak var noProductMessage: UILabel!
+    @IBOutlet weak var loadingProductsView: UIView!
+    @IBOutlet weak var loadingProductsActivityIndicator: UIActivityIndicatorView!
+    
     
     var presenter: ProductListPresenterProtocol!
     private var productList:[String] = [String]()
@@ -52,5 +55,14 @@ extension ProductListViewController: ProductListViewProtocol {
     
     func showEmptyListMessage() {
         self.noProductMessage.alpha = 1
+    }
+    
+    func setLoadingViewVisibility(visible:Bool) {
+        visible ? (self.loadingProductsView.alpha = 1) : (self.loadingProductsView.alpha = 0)
+        visible ? self.loadingProductsActivityIndicator.startAnimating() : self.loadingProductsActivityIndicator.stopAnimating()
+    }
+    
+    func setProductListVisibility(visible:Bool) {
+        visible ? (self.productTableView.alpha = 1) : (self.productTableView.alpha = 0)
     }
 }

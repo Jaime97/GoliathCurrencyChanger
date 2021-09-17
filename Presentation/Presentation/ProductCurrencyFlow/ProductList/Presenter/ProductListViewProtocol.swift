@@ -11,5 +11,7 @@ protocol ProductListViewProtocol {
     
     func showProductList(products:[String])
     func showEmptyListMessage()
+    func setLoadingViewVisibility(visible:Bool)
+    func setProductListVisibility(visible:Bool)
     
 }

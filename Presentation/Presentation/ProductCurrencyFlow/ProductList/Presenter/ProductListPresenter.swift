@@ -30,8 +30,16 @@ class ProductListPresenter {
     }
     
     func getProductList() {
+        self.productListView.setProductListVisibility(visible: false)
+        self.productListView.setLoadingViewVisibility(visible: true)
         self.getProductListUseCase.execute { productList in
-            productList.isEmpty ? self.productListView.showEmptyListMessage() : self.productListView.showProductList(products: productList)
+            self.productListView.setLoadingViewVisibility(visible: false)
+            if(productList.isEmpty) {
+                self.productListView.showEmptyListMessage()
+            } else {
+                self.productListView.setProductListVisibility(visible: true)
+                self.productListView.showProductList(products: productList)
+            }
         }
     }
 }
