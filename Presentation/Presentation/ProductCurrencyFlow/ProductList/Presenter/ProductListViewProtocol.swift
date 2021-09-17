@@ -8,6 +8,8 @@
 import Foundation
 
 protocol ProductListViewProtocol {
-
+    
+    func showProductList(products:[String])
+    func showEmptyListMessage()
     
 }

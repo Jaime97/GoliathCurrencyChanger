@@ -10,6 +10,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ProductListViewController" customModule="Presentation" customModuleProvider="target">
             <connections>
+                <outlet property="noProductMessage" destination="0Sj-4n-6nJ" id="P6s-dz-LhA"/>
+                <outlet property="productTableView" destination="ExU-Jd-Vbp" id="T4a-fO-j9p"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -17,8 +19,37 @@
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ExU-Jd-Vbp" userLabel="Product Table View">
+                    <rect key="frame" x="20" y="122.5" width="374" height="729.5"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </tableView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Current products" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hLx-R8-hJG">
+                    <rect key="frame" x="30" y="69" width="359" height="33.5"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="28"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No product available at this time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Sj-4n-6nJ">
+                    <rect key="frame" x="30" y="132.5" width="245" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="ExU-Jd-Vbp" secondAttribute="trailing" constant="20" id="0Nu-c0-eS3"/>
+                <constraint firstItem="0Sj-4n-6nJ" firstAttribute="leading" secondItem="hLx-R8-hJG" secondAttribute="leading" id="0k7-sU-3ii"/>
+                <constraint firstItem="0Sj-4n-6nJ" firstAttribute="top" secondItem="hLx-R8-hJG" secondAttribute="bottom" constant="30" id="16r-70-seb"/>
+                <constraint firstItem="hLx-R8-hJG" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="25" id="74n-Xu-r0d"/>
+                <constraint firstItem="ExU-Jd-Vbp" firstAttribute="top" secondItem="hLx-R8-hJG" secondAttribute="bottom" constant="20" id="8ou-sb-19m"/>
+                <constraint firstItem="hLx-R8-hJG" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="30" id="D9V-QZ-4Rv"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="hLx-R8-hJG" secondAttribute="trailing" constant="25" id="VIe-OU-A80"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="ExU-Jd-Vbp" secondAttribute="bottom" constant="10" id="azR-vO-ynL"/>
+                <constraint firstItem="ExU-Jd-Vbp" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="b3p-Ne-Fq7"/>
+            </constraints>
             <point key="canvasLocation" x="141" y="131"/>
         </view>
     </objects>

@@ -10,6 +10,8 @@ import Swinject
 
 public class DomainDependencyManager {
     public static func setup(container:Container) {
-        
+        container.register(GetProductListUseCaseProtocol.self) { r in
+            GetProductListUseCase()
+        }
     }
 }

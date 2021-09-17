@@ -12,14 +12,39 @@ protocol ProductSelectionDelegate: AnyObject {
 
 }
 
+protocol ProductListPresenterProtocol {
+    func onViewLoaded()
+    func onProductSelected()
+}
+
 class ProductListPresenter {
     
     let productListView: ProductListViewProtocol
+    let getProductListUseCase: GetProductListUseCaseProtocol
     
     let delegate: ProductSelectionDelegate? = nil
     
-    init(productListView:ProductListViewProtocol) {
+    init(productListView:ProductListViewProtocol, getProductListUseCase: GetProductListUseCaseProtocol) {
         self.productListView = productListView
+        self.getProductListUseCase = getProductListUseCase
     }
     
+    func getProductList() {
+        self.getProductListUseCase.execute { productList in
+            productList.isEmpty ? self.productListView.showEmptyListMessage() : self.productListView.showProductList(products: productList)
+        }
+    }
 }
+
+extension ProductListPresenter: ProductListPresenterProtocol {
+    func onViewLoaded() {
+        self.getProductList()
+    }
+    
+    func onProductSelected() {
+        
+    }
+    
+    
+}
+

@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		411BE12B26F4A82500D8168F /* Domain.h in Headers */ = {isa = PBXBuildFile; fileRef = 411BE12926F4A82500D8168F /* Domain.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		411BE1F626F4FED700D8168F /* DomainDependencyManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 411BE1F526F4FED700D8168F /* DomainDependencyManager.swift */; };
+		411BE25426F52BD700D8168F /* GetProductListUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 411BE25326F52BD700D8168F /* GetProductListUseCase.swift */; };
 		7FCAAD172E394B457063A997 /* Pods_Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56C21337F1031A14BB8D629A /* Pods_Domain.framework */; };
 /* End PBXBuildFile section */
 
@@ -18,6 +19,7 @@
 		411BE12926F4A82500D8168F /* Domain.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Domain.h; sourceTree = "<group>"; };
 		411BE12A26F4A82500D8168F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		411BE1F526F4FED700D8168F /* DomainDependencyManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DomainDependencyManager.swift; sourceTree = "<group>"; };
+		411BE25326F52BD700D8168F /* GetProductListUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetProductListUseCase.swift; sourceTree = "<group>"; };
 		56C21337F1031A14BB8D629A /* Pods_Domain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Domain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCF1874D4CA53B6ECDC024A2 /* Pods-Domain.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Domain.release.xcconfig"; path = "Target Support Files/Pods-Domain/Pods-Domain.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -67,6 +69,7 @@
 		411BE1BB26F4E2F200D8168F /* UseCases */ = {
 			isa = PBXGroup;
 			children = (
+				411BE25326F52BD700D8168F /* GetProductListUseCase.swift */,
 			);
 			path = UseCases;
 			sourceTree = "<group>";
@@ -209,6 +212,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				411BE25426F52BD700D8168F /* GetProductListUseCase.swift in Sources */,
 				411BE1F626F4FED700D8168F /* DomainDependencyManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
