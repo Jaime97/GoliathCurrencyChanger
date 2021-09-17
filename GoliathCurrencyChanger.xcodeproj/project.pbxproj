@@ -1,0 +1,773 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		410EA6E526F49D160026A1A7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 410EA6E426F49D160026A1A7 /* AppDelegate.swift */; };
+		410EA6EE26F49D170026A1A7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 410EA6ED26F49D170026A1A7 /* Assets.xcassets */; };
+		410EA6F126F49D170026A1A7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 410EA6EF26F49D170026A1A7 /* LaunchScreen.storyboard */; };
+		410EA6FC26F49D170026A1A7 /* GoliathCurrencyChangerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 410EA6FB26F49D170026A1A7 /* GoliathCurrencyChangerTests.swift */; };
+		410EA70726F49D170026A1A7 /* GoliathCurrencyChangerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 410EA70626F49D170026A1A7 /* GoliathCurrencyChangerUITests.swift */; };
+		411BE14426F4AB4300D8168F /* Domain.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 411BE14226F4AAF700D8168F /* Domain.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		411BE19A26F4B94800D8168F /* Data.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 411BE19926F4B94200D8168F /* Data.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		411BE19B26F4B94C00D8168F /* Presentation.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 411BE19326F4B92900D8168F /* Presentation.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		411BE1D526F4EEE000D8168F /* AppDelegate+Setup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 411BE1D426F4EEE000D8168F /* AppDelegate+Setup.swift */; };
+		5C2966118FE54122D37950A0 /* Pods_GoliathCurrencyChanger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7059F17DBE9C1988BEEDC93A /* Pods_GoliathCurrencyChanger.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		410EA6F826F49D170026A1A7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 410EA6D926F49D160026A1A7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 410EA6E026F49D160026A1A7;
+			remoteInfo = GoliathCurrencyChanger;
+		};
+		410EA70326F49D170026A1A7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 410EA6D926F49D160026A1A7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 410EA6E026F49D160026A1A7;
+			remoteInfo = GoliathCurrencyChanger;
+		};
+		411BE14126F4AAF700D8168F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 411BE13D26F4AAF700D8168F /* Domain.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 411BE12626F4A82500D8168F;
+			remoteInfo = Domain;
+		};
+		411BE19226F4B92900D8168F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 411BE18C26F4B92900D8168F /* Presentation.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 411BE16D26F4B85300D8168F;
+			remoteInfo = Presentation;
+		};
+		411BE19826F4B94200D8168F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 411BE19426F4B94200D8168F /* Data.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 411BE14F26F4B81300D8168F;
+			remoteInfo = Data;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		411BE14326F4AB1A00D8168F /* Copy Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				411BE14426F4AB4300D8168F /* Domain.framework in Copy Frameworks */,
+				411BE19A26F4B94800D8168F /* Data.framework in Copy Frameworks */,
+				411BE19B26F4B94C00D8168F /* Presentation.framework in Copy Frameworks */,
+			);
+			name = "Copy Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		410EA6E126F49D160026A1A7 /* GoliathCurrencyChanger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GoliathCurrencyChanger.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		410EA6E426F49D160026A1A7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		410EA6ED26F49D170026A1A7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		410EA6F026F49D170026A1A7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		410EA6F226F49D170026A1A7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		410EA6F726F49D170026A1A7 /* GoliathCurrencyChangerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GoliathCurrencyChangerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		410EA6FB26F49D170026A1A7 /* GoliathCurrencyChangerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoliathCurrencyChangerTests.swift; sourceTree = "<group>"; };
+		410EA6FD26F49D170026A1A7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		410EA70226F49D170026A1A7 /* GoliathCurrencyChangerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GoliathCurrencyChangerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		410EA70626F49D170026A1A7 /* GoliathCurrencyChangerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoliathCurrencyChangerUITests.swift; sourceTree = "<group>"; };
+		410EA70826F49D170026A1A7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		411BE13D26F4AAF700D8168F /* Domain.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Domain.xcodeproj; path = Domain/Domain.xcodeproj; sourceTree = SOURCE_ROOT; };
+		411BE18C26F4B92900D8168F /* Presentation.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Presentation.xcodeproj; path = Presentation/Presentation.xcodeproj; sourceTree = SOURCE_ROOT; };
+		411BE19426F4B94200D8168F /* Data.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Data.xcodeproj; path = Data/Data.xcodeproj; sourceTree = SOURCE_ROOT; };
+		411BE1D426F4EEE000D8168F /* AppDelegate+Setup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppDelegate+Setup.swift"; sourceTree = "<group>"; };
+		4E033ADC47E33AAE4A36A7D3 /* Pods-GoliathCurrencyChanger.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoliathCurrencyChanger.release.xcconfig"; path = "Target Support Files/Pods-GoliathCurrencyChanger/Pods-GoliathCurrencyChanger.release.xcconfig"; sourceTree = "<group>"; };
+		7059F17DBE9C1988BEEDC93A /* Pods_GoliathCurrencyChanger.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GoliathCurrencyChanger.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E15056B771B9E58ECAAADFB2 /* Pods-GoliathCurrencyChanger.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoliathCurrencyChanger.debug.xcconfig"; path = "Target Support Files/Pods-GoliathCurrencyChanger/Pods-GoliathCurrencyChanger.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		410EA6DE26F49D160026A1A7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5C2966118FE54122D37950A0 /* Pods_GoliathCurrencyChanger.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		410EA6F426F49D170026A1A7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		410EA6FF26F49D170026A1A7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		410EA6D826F49D160026A1A7 = {
+			isa = PBXGroup;
+			children = (
+				411BE13C26F4AAE300D8168F /* Dependencies */,
+				410EA6E326F49D160026A1A7 /* GoliathCurrencyChanger */,
+				410EA6FA26F49D170026A1A7 /* GoliathCurrencyChangerTests */,
+				410EA70526F49D170026A1A7 /* GoliathCurrencyChangerUITests */,
+				410EA6E226F49D160026A1A7 /* Products */,
+				CD9A31C64626E4009E04301F /* Pods */,
+				FF5814D5C30CFAF262749F12 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		410EA6E226F49D160026A1A7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				410EA6E126F49D160026A1A7 /* GoliathCurrencyChanger.app */,
+				410EA6F726F49D170026A1A7 /* GoliathCurrencyChangerTests.xctest */,
+				410EA70226F49D170026A1A7 /* GoliathCurrencyChangerUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		410EA6E326F49D160026A1A7 /* GoliathCurrencyChanger */ = {
+			isa = PBXGroup;
+			children = (
+				411BE1D326F4EEC800D8168F /* Support files */,
+				410EA6E426F49D160026A1A7 /* AppDelegate.swift */,
+				410EA6ED26F49D170026A1A7 /* Assets.xcassets */,
+				410EA6EF26F49D170026A1A7 /* LaunchScreen.storyboard */,
+				410EA6F226F49D170026A1A7 /* Info.plist */,
+			);
+			path = GoliathCurrencyChanger;
+			sourceTree = "<group>";
+		};
+		410EA6FA26F49D170026A1A7 /* GoliathCurrencyChangerTests */ = {
+			isa = PBXGroup;
+			children = (
+				410EA6FB26F49D170026A1A7 /* GoliathCurrencyChangerTests.swift */,
+				410EA6FD26F49D170026A1A7 /* Info.plist */,
+			);
+			path = GoliathCurrencyChangerTests;
+			sourceTree = "<group>";
+		};
+		410EA70526F49D170026A1A7 /* GoliathCurrencyChangerUITests */ = {
+			isa = PBXGroup;
+			children = (
+				410EA70626F49D170026A1A7 /* GoliathCurrencyChangerUITests.swift */,
+				410EA70826F49D170026A1A7 /* Info.plist */,
+			);
+			path = GoliathCurrencyChangerUITests;
+			sourceTree = "<group>";
+		};
+		411BE13C26F4AAE300D8168F /* Dependencies */ = {
+			isa = PBXGroup;
+			children = (
+				411BE19426F4B94200D8168F /* Data.xcodeproj */,
+				411BE18C26F4B92900D8168F /* Presentation.xcodeproj */,
+				411BE13D26F4AAF700D8168F /* Domain.xcodeproj */,
+			);
+			path = Dependencies;
+			sourceTree = "<group>";
+		};
+		411BE13E26F4AAF700D8168F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				411BE14226F4AAF700D8168F /* Domain.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		411BE18D26F4B92900D8168F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				411BE19326F4B92900D8168F /* Presentation.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		411BE19526F4B94200D8168F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				411BE19926F4B94200D8168F /* Data.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		411BE1D326F4EEC800D8168F /* Support files */ = {
+			isa = PBXGroup;
+			children = (
+				411BE1D426F4EEE000D8168F /* AppDelegate+Setup.swift */,
+			);
+			path = "Support files";
+			sourceTree = "<group>";
+		};
+		CD9A31C64626E4009E04301F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E15056B771B9E58ECAAADFB2 /* Pods-GoliathCurrencyChanger.debug.xcconfig */,
+				4E033ADC47E33AAE4A36A7D3 /* Pods-GoliathCurrencyChanger.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		FF5814D5C30CFAF262749F12 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7059F17DBE9C1988BEEDC93A /* Pods_GoliathCurrencyChanger.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		410EA6E026F49D160026A1A7 /* GoliathCurrencyChanger */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 410EA70B26F49D170026A1A7 /* Build configuration list for PBXNativeTarget "GoliathCurrencyChanger" */;
+			buildPhases = (
+				35F5E686F1D353E987A5FF5D /* [CP] Check Pods Manifest.lock */,
+				410EA6DD26F49D160026A1A7 /* Sources */,
+				410EA6DE26F49D160026A1A7 /* Frameworks */,
+				410EA6DF26F49D160026A1A7 /* Resources */,
+				9726713CD071C71DEA39E184 /* [CP] Embed Pods Frameworks */,
+				411BE14326F4AB1A00D8168F /* Copy Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GoliathCurrencyChanger;
+			productName = GoliathCurrencyChanger;
+			productReference = 410EA6E126F49D160026A1A7 /* GoliathCurrencyChanger.app */;
+			productType = "com.apple.product-type.application";
+		};
+		410EA6F626F49D170026A1A7 /* GoliathCurrencyChangerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 410EA70E26F49D170026A1A7 /* Build configuration list for PBXNativeTarget "GoliathCurrencyChangerTests" */;
+			buildPhases = (
+				410EA6F326F49D170026A1A7 /* Sources */,
+				410EA6F426F49D170026A1A7 /* Frameworks */,
+				410EA6F526F49D170026A1A7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				410EA6F926F49D170026A1A7 /* PBXTargetDependency */,
+			);
+			name = GoliathCurrencyChangerTests;
+			productName = GoliathCurrencyChangerTests;
+			productReference = 410EA6F726F49D170026A1A7 /* GoliathCurrencyChangerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		410EA70126F49D170026A1A7 /* GoliathCurrencyChangerUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 410EA71126F49D170026A1A7 /* Build configuration list for PBXNativeTarget "GoliathCurrencyChangerUITests" */;
+			buildPhases = (
+				410EA6FE26F49D170026A1A7 /* Sources */,
+				410EA6FF26F49D170026A1A7 /* Frameworks */,
+				410EA70026F49D170026A1A7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				410EA70426F49D170026A1A7 /* PBXTargetDependency */,
+			);
+			name = GoliathCurrencyChangerUITests;
+			productName = GoliathCurrencyChangerUITests;
+			productReference = 410EA70226F49D170026A1A7 /* GoliathCurrencyChangerUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		410EA6D926F49D160026A1A7 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1240;
+				LastUpgradeCheck = 1240;
+				TargetAttributes = {
+					410EA6E026F49D160026A1A7 = {
+						CreatedOnToolsVersion = 12.4;
+					};
+					410EA6F626F49D170026A1A7 = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = 410EA6E026F49D160026A1A7;
+					};
+					410EA70126F49D170026A1A7 = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = 410EA6E026F49D160026A1A7;
+					};
+				};
+			};
+			buildConfigurationList = 410EA6DC26F49D160026A1A7 /* Build configuration list for PBXProject "GoliathCurrencyChanger" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 410EA6D826F49D160026A1A7;
+			productRefGroup = 410EA6E226F49D160026A1A7 /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 411BE19526F4B94200D8168F /* Products */;
+					ProjectRef = 411BE19426F4B94200D8168F /* Data.xcodeproj */;
+				},
+				{
+					ProductGroup = 411BE13E26F4AAF700D8168F /* Products */;
+					ProjectRef = 411BE13D26F4AAF700D8168F /* Domain.xcodeproj */;
+				},
+				{
+					ProductGroup = 411BE18D26F4B92900D8168F /* Products */;
+					ProjectRef = 411BE18C26F4B92900D8168F /* Presentation.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				410EA6E026F49D160026A1A7 /* GoliathCurrencyChanger */,
+				410EA6F626F49D170026A1A7 /* GoliathCurrencyChangerTests */,
+				410EA70126F49D170026A1A7 /* GoliathCurrencyChangerUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		411BE14226F4AAF700D8168F /* Domain.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Domain.framework;
+			remoteRef = 411BE14126F4AAF700D8168F /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		411BE19326F4B92900D8168F /* Presentation.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Presentation.framework;
+			remoteRef = 411BE19226F4B92900D8168F /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		411BE19926F4B94200D8168F /* Data.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Data.framework;
+			remoteRef = 411BE19826F4B94200D8168F /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXResourcesBuildPhase section */
+		410EA6DF26F49D160026A1A7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				410EA6F126F49D170026A1A7 /* LaunchScreen.storyboard in Resources */,
+				410EA6EE26F49D170026A1A7 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		410EA6F526F49D170026A1A7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		410EA70026F49D170026A1A7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		35F5E686F1D353E987A5FF5D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GoliathCurrencyChanger-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9726713CD071C71DEA39E184 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GoliathCurrencyChanger/Pods-GoliathCurrencyChanger-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GoliathCurrencyChanger/Pods-GoliathCurrencyChanger-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GoliathCurrencyChanger/Pods-GoliathCurrencyChanger-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		410EA6DD26F49D160026A1A7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				410EA6E526F49D160026A1A7 /* AppDelegate.swift in Sources */,
+				411BE1D526F4EEE000D8168F /* AppDelegate+Setup.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		410EA6F326F49D170026A1A7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				410EA6FC26F49D170026A1A7 /* GoliathCurrencyChangerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		410EA6FE26F49D170026A1A7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				410EA70726F49D170026A1A7 /* GoliathCurrencyChangerUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		410EA6F926F49D170026A1A7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 410EA6E026F49D160026A1A7 /* GoliathCurrencyChanger */;
+			targetProxy = 410EA6F826F49D170026A1A7 /* PBXContainerItemProxy */;
+		};
+		410EA70426F49D170026A1A7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 410EA6E026F49D160026A1A7 /* GoliathCurrencyChanger */;
+			targetProxy = 410EA70326F49D170026A1A7 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		410EA6EF26F49D170026A1A7 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				410EA6F026F49D170026A1A7 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		410EA70926F49D170026A1A7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		410EA70A26F49D170026A1A7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		410EA70C26F49D170026A1A7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E15056B771B9E58ECAAADFB2 /* Pods-GoliathCurrencyChanger.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = GoliathCurrencyChanger/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 0.1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jaimealcantara.GoliathCurrencyChanger;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		410EA70D26F49D170026A1A7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4E033ADC47E33AAE4A36A7D3 /* Pods-GoliathCurrencyChanger.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = GoliathCurrencyChanger/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 0.1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jaimealcantara.GoliathCurrencyChanger;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		410EA70F26F49D170026A1A7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = GoliathCurrencyChangerTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.jaimealcantara.GoliathCurrencyChangerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GoliathCurrencyChanger.app/GoliathCurrencyChanger";
+			};
+			name = Debug;
+		};
+		410EA71026F49D170026A1A7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = GoliathCurrencyChangerTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.jaimealcantara.GoliathCurrencyChangerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GoliathCurrencyChanger.app/GoliathCurrencyChanger";
+			};
+			name = Release;
+		};
+		410EA71226F49D170026A1A7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = GoliathCurrencyChangerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.jaimealcantara.GoliathCurrencyChangerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = GoliathCurrencyChanger;
+			};
+			name = Debug;
+		};
+		410EA71326F49D170026A1A7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = GoliathCurrencyChangerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.jaimealcantara.GoliathCurrencyChangerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = GoliathCurrencyChanger;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		410EA6DC26F49D160026A1A7 /* Build configuration list for PBXProject "GoliathCurrencyChanger" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				410EA70926F49D170026A1A7 /* Debug */,
+				410EA70A26F49D170026A1A7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		410EA70B26F49D170026A1A7 /* Build configuration list for PBXNativeTarget "GoliathCurrencyChanger" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				410EA70C26F49D170026A1A7 /* Debug */,
+				410EA70D26F49D170026A1A7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		410EA70E26F49D170026A1A7 /* Build configuration list for PBXNativeTarget "GoliathCurrencyChangerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				410EA70F26F49D170026A1A7 /* Debug */,
+				410EA71026F49D170026A1A7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		410EA71126F49D170026A1A7 /* Build configuration list for PBXNativeTarget "GoliathCurrencyChangerUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				410EA71226F49D170026A1A7 /* Debug */,
+				410EA71326F49D170026A1A7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 410EA6D926F49D160026A1A7 /* Project object */;
+}
