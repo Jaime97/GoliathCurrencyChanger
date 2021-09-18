@@ -9,20 +9,32 @@ import Foundation
 
 public protocol GetProductListUseCaseProtocol {
     
-    func execute(onListObtained:([String])->())
+    func execute(completion: @escaping (Result<[String], Error>) -> ())
     
 }
 
 class GetProductListUseCase: GetProductListUseCaseProtocol {
 
-    let data = ["New York, NY", "Los Angeles, CA", "Chicago, IL", "Houston, TX",
-            "Philadelphia, PA", "Phoenix, AZ", "San Diego, CA", "San Antonio, TX",
-            "Dallas, TX", "Detroit, MI", "San Jose, CA", "Indianapolis, IN",
-            "Jacksonville, FL", "San Francisco, CA", "Columbus, OH", "Austin, TX",
-            "Memphis, TN", "Baltimore, MD", "Charlotte, ND", "Fort Worth, TX"]
+    let productListRepository: ProductListRepositoryProtocol
     
-    func execute(onListObtained: ([String]) -> ()) {
-        onListObtained(data)
+    init(productListRepository: ProductListRepositoryProtocol) {
+        self.productListRepository = productListRepository
     }
-
+    
+    func execute(completion: @escaping (Result<[String], Error>) -> ()) {
+        DispatchQueue.global().async {
+            self.productListRepository.getProductList(completion: { result in
+                DispatchQueue.main.async {
+                    switch result {
+                    case .success(let productList):
+                        completion(.success(productList.map {
+                            $0.productCode
+                        }))
+                    case .failure(let error):
+                        completion(.failure(error))
+                    }
+                }
+            })
+        }
+    }
 }

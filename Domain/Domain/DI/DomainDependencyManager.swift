@@ -11,7 +11,7 @@ import Swinject
 public class DomainDependencyManager {
     public static func setup(container:Container) {
         container.register(GetProductListUseCaseProtocol.self) { r in
-            GetProductListUseCase()
+            GetProductListUseCase(productListRepository: r.resolve(ProductListRepositoryProtocol.self)!)
         }
     }
 }

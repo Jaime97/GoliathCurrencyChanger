@@ -13,7 +13,7 @@ protocol ProductSelectionDelegate: AnyObject {
 }
 
 protocol ProductListPresenterProtocol {
-    func onViewLoaded()
+    func onViewShowed()
     func onProductSelected()
 }
 
@@ -32,20 +32,33 @@ class ProductListPresenter {
     func getProductList() {
         self.productListView.setProductListVisibility(visible: false)
         self.productListView.setLoadingViewVisibility(visible: true)
-        self.getProductListUseCase.execute { productList in
-            self.productListView.setLoadingViewVisibility(visible: false)
-            if(productList.isEmpty) {
-                self.productListView.showEmptyListMessage()
-            } else {
-                self.productListView.setProductListVisibility(visible: true)
-                self.productListView.showProductList(products: productList)
+        self.getProductListUseCase.execute { result in
+            switch result {
+            case .success(let productList):
+                self.onProductListObtained(productList: productList)
+            case .failure(let error):
+                self.onGetProductListError(error: error)
             }
         }
+    }
+    
+    func onProductListObtained(productList: [String]) {
+        self.productListView.setLoadingViewVisibility(visible: false)
+        if(productList.isEmpty) {
+            self.productListView.showEmptyListMessage()
+        } else {
+            self.productListView.setProductListVisibility(visible: true)
+            self.productListView.showProductList(products: productList)
+        }
+    }
+    
+    func onGetProductListError(error:Error) {
+        self.productListView.showAlert(title: NSLocalizedString("error", comment: ""), message: NSLocalizedString("product_list_error", comment: ""), buttonTitle: NSLocalizedString("ok", comment: ""))
     }
 }
 
 extension ProductListPresenter: ProductListPresenterProtocol {
-    func onViewLoaded() {
+    func onViewShowed() {
         self.getProductList()
     }
     

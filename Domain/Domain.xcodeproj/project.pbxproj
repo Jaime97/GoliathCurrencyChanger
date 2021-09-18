@@ -10,6 +10,8 @@
 		411BE12B26F4A82500D8168F /* Domain.h in Headers */ = {isa = PBXBuildFile; fileRef = 411BE12926F4A82500D8168F /* Domain.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		411BE1F626F4FED700D8168F /* DomainDependencyManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 411BE1F526F4FED700D8168F /* DomainDependencyManager.swift */; };
 		411BE25426F52BD700D8168F /* GetProductListUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 411BE25326F52BD700D8168F /* GetProductListUseCase.swift */; };
+		413EB02026F5F4D000227D51 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413EB01F26F5F4D000227D51 /* Product.swift */; };
+		413EB02E26F5F88C00227D51 /* ProductListRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413EB02D26F5F88C00227D51 /* ProductListRepositoryProtocol.swift */; };
 		7FCAAD172E394B457063A997 /* Pods_Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56C21337F1031A14BB8D629A /* Pods_Domain.framework */; };
 /* End PBXBuildFile section */
 
@@ -20,6 +22,8 @@
 		411BE12A26F4A82500D8168F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		411BE1F526F4FED700D8168F /* DomainDependencyManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DomainDependencyManager.swift; sourceTree = "<group>"; };
 		411BE25326F52BD700D8168F /* GetProductListUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetProductListUseCase.swift; sourceTree = "<group>"; };
+		413EB01F26F5F4D000227D51 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
+		413EB02D26F5F88C00227D51 /* ProductListRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListRepositoryProtocol.swift; sourceTree = "<group>"; };
 		56C21337F1031A14BB8D629A /* Pods_Domain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Domain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCF1874D4CA53B6ECDC024A2 /* Pods-Domain.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Domain.release.xcconfig"; path = "Target Support Files/Pods-Domain/Pods-Domain.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -57,6 +61,7 @@
 		411BE12826F4A82500D8168F /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				413EB02C26F5F87800227D51 /* Repository */,
 				411BE1F426F4FEC100D8168F /* DI */,
 				411BE1BC26F4E2FA00D8168F /* Entities */,
 				411BE1BB26F4E2F200D8168F /* UseCases */,
@@ -77,6 +82,7 @@
 		411BE1BC26F4E2FA00D8168F /* Entities */ = {
 			isa = PBXGroup;
 			children = (
+				413EB01F26F5F4D000227D51 /* Product.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -87,6 +93,14 @@
 				411BE1F526F4FED700D8168F /* DomainDependencyManager.swift */,
 			);
 			path = DI;
+			sourceTree = "<group>";
+		};
+		413EB02C26F5F87800227D51 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				413EB02D26F5F88C00227D51 /* ProductListRepositoryProtocol.swift */,
+			);
+			path = Repository;
 			sourceTree = "<group>";
 		};
 		E8369C50BD4CA6A33AE144F1 /* Frameworks */ = {
@@ -213,7 +227,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				411BE25426F52BD700D8168F /* GetProductListUseCase.swift in Sources */,
+				413EB02E26F5F88C00227D51 /* ProductListRepositoryProtocol.swift in Sources */,
 				411BE1F626F4FED700D8168F /* DomainDependencyManager.swift in Sources */,
+				413EB02026F5F4D000227D51 /* Product.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

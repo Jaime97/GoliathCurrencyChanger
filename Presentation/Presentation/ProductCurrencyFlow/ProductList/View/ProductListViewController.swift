@@ -26,7 +26,11 @@ class ProductListViewController: UIViewController {
         self.productTableView.delegate = self
         self.productTableView.register(UITableViewCell.self, forCellReuseIdentifier: CellIdentifier)
         self.noProductMessage.alpha = 0
-        self.presenter.onViewLoaded()
+        
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        self.presenter.onViewShowed()
     }
 }
 
@@ -64,5 +68,11 @@ extension ProductListViewController: ProductListViewProtocol {
     
     func setProductListVisibility(visible:Bool) {
         visible ? (self.productTableView.alpha = 1) : (self.productTableView.alpha = 0)
+    }
+    
+    func showAlert(title:String, message:String, buttonTitle:String) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: buttonTitle, style: .default, handler:nil))
+        self.present(alert, animated: true, completion: nil)
     }
 }

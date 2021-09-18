@@ -1,0 +1,11 @@
+/* 
+  Localizable.strings
+  Presentation
+
+  Created by Jaime Alcántara on 18/09/2021.
+  
+*/
+
+"error" = "Error";
+"product_list_error" = "There was an error getting the product list. Please, try again later.";
+"ok" = "Ok";
