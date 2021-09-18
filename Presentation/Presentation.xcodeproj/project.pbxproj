@@ -60,7 +60,7 @@
 		411BE1CE26F4EAB200D8168F /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		411BE1D926F4F0BA00D8168F /* ProductCurrencyCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCurrencyCoordinator.swift; sourceTree = "<group>"; };
 		411BE1EE26F4F60F00D8168F /* PresentationDependencyManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentationDependencyManager.swift; sourceTree = "<group>"; };
-		413EB03126F5FBC000227D51 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		413EB03126F5FBC000227D51 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Localizable.strings; path = ../../GoliathCurrencyChanger/Localizable.strings; sourceTree = "<group>"; };
 		85DCB955A8287B2C22E82E35 /* Pods-Presentation.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Presentation.debug.xcconfig"; path = "Target Support Files/Pods-Presentation/Pods-Presentation.debug.xcconfig"; sourceTree = "<group>"; };
 		B6D5C84928439662682E56B0 /* Pods-Presentation.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Presentation.release.xcconfig"; path = "Target Support Files/Pods-Presentation/Pods-Presentation.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */

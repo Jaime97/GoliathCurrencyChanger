@@ -8,4 +8,5 @@
 
 "error" = "Error";
 "product_list_error" = "There was an error getting the product list. Please, try again later.";
+"pull_to_refresh" = "Pull to refresh";
 "ok" = "Ok";

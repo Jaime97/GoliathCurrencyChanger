@@ -14,5 +14,7 @@ protocol ProductListViewProtocol {
     func setLoadingViewVisibility(visible:Bool)
     func setProductListVisibility(visible:Bool)
     func showAlert(title:String, message:String, buttonTitle:String)
+    func addRefreshToTable(refreshMessage:String)
+    func endRefreshing()
     
 }

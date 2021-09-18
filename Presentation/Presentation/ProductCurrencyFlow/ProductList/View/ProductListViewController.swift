@@ -16,9 +16,9 @@ class ProductListViewController: UIViewController {
     @IBOutlet weak var loadingProductsView: UIView!
     @IBOutlet weak var loadingProductsActivityIndicator: UIActivityIndicatorView!
     
-    
     var presenter: ProductListPresenterProtocol!
     private var productList:[String] = [String]()
+    private let refreshControl = UIRefreshControl()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,7 +26,10 @@ class ProductListViewController: UIViewController {
         self.productTableView.delegate = self
         self.productTableView.register(UITableViewCell.self, forCellReuseIdentifier: CellIdentifier)
         self.noProductMessage.alpha = 0
-        
+    }
+    
+    @objc func onRefresh(_ sender: AnyObject) {
+        self.presenter.onTableRefresh()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -74,5 +77,15 @@ extension ProductListViewController: ProductListViewProtocol {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: buttonTitle, style: .default, handler:nil))
         self.present(alert, animated: true, completion: nil)
+    }
+    
+    func addRefreshToTable(refreshMessage:String) {
+        self.refreshControl.attributedTitle = NSAttributedString(string: refreshMessage)
+        self.refreshControl.addTarget(self, action: #selector(self.onRefresh(_:)), for: .valueChanged)
+        self.productTableView.addSubview(self.refreshControl)
+    }
+    
+    func endRefreshing() {
+        self.refreshControl.endRefreshing()
     }
 }
