@@ -7,14 +7,20 @@
 
 import Foundation
 
-public struct Product: Codable {
+public class Product {
     let productCode: String
-    let amount: String
-    let currency: String
+    var amounts: [(Decimal, String)]
     
-    public init(productCode: String, amount: String, currency: String) {
+    public init(productCode:String) {
         self.productCode = productCode
-        self.amount = amount
-        self.currency = currency
+        self.amounts = [(Decimal, String)]()
+    }
+    
+    public func addAmount(amount:Decimal, currency:String) {
+        self.amounts.append((amount, currency))
+    }
+    
+    public func getProductCode() -> String {
+        return self.productCode
     }
 }

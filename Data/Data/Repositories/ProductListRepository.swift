@@ -20,20 +20,33 @@ class ProductListRepository: ProductListRepositoryProtocol {
         self.networkManager.fetchProducts(completion: { result in
             switch result {
             case .success(let productList):
-                completion(.success(productList.map {
-                    $0.toProduct()
-                }))
+                completion(.success(self.mapNetworkProductArrayToProductArray(networkProductList: productList)))
             case .failure(let error):
                 completion(.failure(error))
             }
         })
     }
+    
+    func mapNetworkProductArrayToProductArray(networkProductList: [NetworkProduct]) -> [Product] {
+        var productList = [Product]()
+        for networkProduct in networkProductList {
+            if let product = productList.first(where: { $0.getProductCode() == networkProduct.sku}) {
+                product.addAmount(amount: networkProduct.amount.toDecimal()!, currency: networkProduct.currency)
+            } else {
+                let newProduct = Product(productCode: networkProduct.sku)
+                newProduct.addAmount(amount: networkProduct.amount.toDecimal()!, currency: networkProduct.currency)
+                productList.append(newProduct)
+            }
+        }
+        return productList
+    }
 }
 
-extension NetworkProduct {
-    
-    func toProduct() -> Product {
-        return Product(productCode: self.sku, amount: self.amount, currency: self.currency)
+extension String {
+    func toDecimal() -> Decimal? {
+        let formatter = NumberFormatter()
+        formatter.generatesDecimalNumbers = true
+        formatter.numberStyle = NumberFormatter.Style.decimal
+        return formatter.number(from: self.description) as? Decimal
     }
-    
 }
