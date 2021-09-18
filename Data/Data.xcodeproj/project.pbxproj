@@ -15,6 +15,7 @@
 		413DD30C26F637BC00BD30B7 /* MemoryStorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413DD30B26F637BC00BD30B7 /* MemoryStorageManager.swift */; };
 		413DD30F26F6382D00BD30B7 /* DataProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413DD30E26F6382D00BD30B7 /* DataProduct.swift */; };
 		413DD31126F63B4C00BD30B7 /* String+Decimal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413DD31026F63B4C00BD30B7 /* String+Decimal.swift */; };
+		413DD31326F6401800BD30B7 /* NetworkCurrencyConversion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413DD31226F6401800BD30B7 /* NetworkCurrencyConversion.swift */; };
 		413EB01926F5EA3900227D51 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413EB01826F5EA3900227D51 /* NetworkManager.swift */; };
 		413EB01D26F5F31F00227D51 /* DataConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413EB01C26F5F31F00227D51 /* DataConstants.swift */; };
 		413EB02926F5F5D000227D51 /* Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 413EB02826F5F5C100227D51 /* Domain.framework */; };
@@ -58,6 +59,7 @@
 		413DD30B26F637BC00BD30B7 /* MemoryStorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryStorageManager.swift; sourceTree = "<group>"; };
 		413DD30E26F6382D00BD30B7 /* DataProduct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataProduct.swift; sourceTree = "<group>"; };
 		413DD31026F63B4C00BD30B7 /* String+Decimal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Decimal.swift"; sourceTree = "<group>"; };
+		413DD31226F6401800BD30B7 /* NetworkCurrencyConversion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkCurrencyConversion.swift; sourceTree = "<group>"; };
 		413EB01826F5EA3900227D51 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		413EB01C26F5F31F00227D51 /* DataConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataConstants.swift; sourceTree = "<group>"; };
 		413EB02326F5F5C100227D51 /* Domain.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Domain.xcodeproj; path = ../../Domain/Domain.xcodeproj; sourceTree = "<group>"; };
@@ -143,6 +145,7 @@
 			isa = PBXGroup;
 			children = (
 				41375A0C26F5E8350087C8E9 /* NetworkProduct.swift */,
+				413DD31226F6401800BD30B7 /* NetworkCurrencyConversion.swift */,
 			);
 			path = ApiModels;
 			sourceTree = "<group>";
@@ -319,6 +322,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				413DD31326F6401800BD30B7 /* NetworkCurrencyConversion.swift in Sources */,
 				413DD30C26F637BC00BD30B7 /* MemoryStorageManager.swift in Sources */,
 				41375A0526F5E4280087C8E9 /* ProductApi.swift in Sources */,
 				413EB01D26F5F31F00227D51 /* DataConstants.swift in Sources */,

@@ -40,7 +40,7 @@ extension ProductRepository: ProductRepositoryProtocol {
     }
     
     func getProductList(completion: @escaping (Result<[Product], Error>) -> ()) {
-        self.networkManager.fetchProducts(completion: { result in
+        self.networkManager.fetchProducts { result in
             switch result {
             case .success(let productList):
                 let dataProductList = self.mapNetworkProductArrayToDataProductArray(networkProductList: productList)
@@ -51,8 +51,27 @@ extension ProductRepository: ProductRepositoryProtocol {
             case .failure(let error):
                 completion(.failure(error))
             }
-        })
+        }
     }
+    
+    func getCurrencyConversions(completion: @escaping (Result<[CurrencyConversion], Error>) -> ()) {
+        self.networkManager.fetchCurrencyConversions { result in
+            switch result {
+            case .success(let currencyConversionList):
+                completion(.success(currencyConversionList.map { $0.toCurrencyConversion() }))
+            case .failure(let error):
+                completion(.failure(error))
+            }
+        }
+    }
+}
+
+extension NetworkCurrencyConversion {
+    
+    func toCurrencyConversion() -> CurrencyConversion {
+        return CurrencyConversion(currencyPair: (self.from, self.to), rate: self.rate.toDecimal()!)
+    }
+    
 }
 
 extension DataProduct {

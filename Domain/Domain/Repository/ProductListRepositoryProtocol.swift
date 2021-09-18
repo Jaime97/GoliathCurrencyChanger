@@ -13,4 +13,6 @@ public protocol ProductRepositoryProtocol {
     
     func findProductInProductList(productCode:String) -> Product?
     
+    func getCurrencyConversions(completion: @escaping (Result<[CurrencyConversion], Error>) -> ())
+    
 }

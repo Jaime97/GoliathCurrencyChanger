@@ -9,6 +9,7 @@ import Moya
 
 enum ProductApi {
     case productList
+    case currencyConversions
 }
 
 extension ProductApi: TargetType {
@@ -22,6 +23,8 @@ extension ProductApi: TargetType {
         switch self {
         case .productList:
             return DataConstants.productListApiPath
+        case .currencyConversions:
+            return DataConstants.productRatesApiPath
         }
     }
     
@@ -35,7 +38,7 @@ extension ProductApi: TargetType {
     
     var task: Task {
         switch self {
-        case .productList:
+        case .productList, .currencyConversions:
             return .requestPlain
         }
     }

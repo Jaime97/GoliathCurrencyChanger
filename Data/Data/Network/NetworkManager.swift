@@ -11,6 +11,8 @@ protocol Networkable {
     var provider: MoyaProvider<ProductApi> { get }
 
     func fetchProducts(completion: @escaping (Result<[NetworkProduct], Error>) -> ())
+    
+    func fetchCurrencyConversions(completion: @escaping (Result<[NetworkCurrencyConversion], Error>) -> ())
 }
 
 class NetworkManager: Networkable {
@@ -18,6 +20,10 @@ class NetworkManager: Networkable {
 
     func fetchProducts(completion: @escaping (Result<[NetworkProduct], Error>) -> ()) {
         self.request(target: .productList, completion: completion)
+    }
+    
+    func fetchCurrencyConversions(completion: @escaping (Result<[NetworkCurrencyConversion], Error>) -> ()) {
+        self.request(target: .currencyConversions, completion: completion)
     }
 }
 
