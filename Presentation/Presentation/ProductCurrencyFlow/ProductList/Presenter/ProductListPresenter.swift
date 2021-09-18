@@ -9,25 +9,29 @@ import Foundation
 import Domain
 
 protocol ProductSelectionDelegate: AnyObject {
-
+    func onProductSelected(product:String)
 }
 
 protocol ProductListPresenterProtocol {
+    
+    var delegate: ProductSelectionDelegate? { get set }
+    
     func onViewShowed()
-    func onProductSelected()
+    func onProductSelected(name: String)
     func onTableRefresh()
 }
 
 class ProductListPresenter {
     
+    var delegate: ProductSelectionDelegate?
     let productListView: ProductListViewProtocol
     let getProductListUseCase: GetProductListUseCaseProtocol
-    
-    let delegate: ProductSelectionDelegate? = nil
+    var initialConfigurationDone : Bool
     
     init(productListView:ProductListViewProtocol, getProductListUseCase: GetProductListUseCaseProtocol) {
         self.productListView = productListView
         self.getProductListUseCase = getProductListUseCase
+        self.initialConfigurationDone = false
     }
     
     func getProductList() {
@@ -70,13 +74,17 @@ class ProductListPresenter {
 }
 
 extension ProductListPresenter: ProductListPresenterProtocol {
+    
     func onViewShowed() {
-        self.getProductList()
-        self.productListView.addRefreshToTable(refreshMessage: NSLocalizedString("pull_to_refresh", comment: ""))
+        if(!initialConfigurationDone) {
+            self.initialConfigurationDone = true
+            self.getProductList()
+            self.productListView.addRefreshToTable(refreshMessage: NSLocalizedString("pull_to_refresh", comment: ""))
+        }
     }
     
-    func onProductSelected() {
-        
+    func onProductSelected(name: String) {
+        self.delegate?.onProductSelected(product: name)
     }
     
     func onTableRefresh() {

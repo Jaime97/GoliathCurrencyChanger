@@ -21,6 +21,16 @@ public class PresentationDependencyManager {
         container.register(ProductListPresenterProtocol.self) { r in
             ProductListPresenter(productListView: r.resolve(ProductListViewProtocol.self)!, getProductListUseCase: r.resolve(GetProductListUseCaseProtocol.self)!)
         }
+        
+        container.register(ProductDetailViewProtocol.self){ _ in  ProductDetailViewController(nibName: "ProductDetailViewController", bundle: Bundle(for: ProductDetailViewController.self)) }
+            .initCompleted { r, c in
+                let productDetailViewController = c as! ProductDetailViewController
+                productDetailViewController.presenter = r.resolve(ProductDetailPresenterProtocol.self)
+            }
+        
+        container.register(ProductDetailPresenterProtocol.self) { r in
+            ProductDetailPresenter(productDetailView: r.resolve(ProductDetailViewProtocol.self)!)
+        }
     }
     
 }

@@ -39,7 +39,9 @@ class ProductListViewController: UIViewController {
 
 extension ProductListViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        self.presenter.onProductSelected()
+        let selectedCell = tableView.cellForRow(at: indexPath)
+        let name = selectedCell?.textLabel?.text
+        self.presenter.onProductSelected(name: name!)
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -49,6 +51,7 @@ extension ProductListViewController: UITableViewDataSource, UITableViewDelegate 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: CellIdentifier, for: indexPath)
         cell.textLabel?.text = self.productList[indexPath.row]
+        cell.selectionStyle = .none
         return cell
     }
 }
