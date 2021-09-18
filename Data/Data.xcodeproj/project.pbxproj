@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		411BE15426F4B81400D8168F /* Data.h in Headers */ = {isa = PBXBuildFile; fileRef = 411BE15226F4B81300D8168F /* Data.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		411BE22726F51AF600D8168F /* DataDependencyManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 411BE22626F51AF600D8168F /* DataDependencyManager.swift */; };
-		41375A0226F5E3370087C8E9 /* ProductListRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41375A0126F5E3370087C8E9 /* ProductListRepository.swift */; };
+		41375A0226F5E3370087C8E9 /* ProductRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41375A0126F5E3370087C8E9 /* ProductRepository.swift */; };
 		41375A0526F5E4280087C8E9 /* ProductApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41375A0426F5E4280087C8E9 /* ProductApi.swift */; };
 		41375A0D26F5E8350087C8E9 /* NetworkProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41375A0C26F5E8350087C8E9 /* NetworkProduct.swift */; };
 		413EB01926F5EA3900227D51 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413EB01826F5EA3900227D51 /* NetworkManager.swift */; };
@@ -49,7 +49,7 @@
 		411BE15226F4B81300D8168F /* Data.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Data.h; sourceTree = "<group>"; };
 		411BE15326F4B81300D8168F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		411BE22626F51AF600D8168F /* DataDependencyManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataDependencyManager.swift; sourceTree = "<group>"; };
-		41375A0126F5E3370087C8E9 /* ProductListRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListRepository.swift; sourceTree = "<group>"; };
+		41375A0126F5E3370087C8E9 /* ProductRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductRepository.swift; sourceTree = "<group>"; };
 		41375A0426F5E4280087C8E9 /* ProductApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductApi.swift; sourceTree = "<group>"; };
 		41375A0C26F5E8350087C8E9 /* NetworkProduct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkProduct.swift; sourceTree = "<group>"; };
 		413EB01826F5EA3900227D51 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
@@ -117,7 +117,7 @@
 		411BE1BE26F4E33100D8168F /* Repositories */ = {
 			isa = PBXGroup;
 			children = (
-				41375A0126F5E3370087C8E9 /* ProductListRepository.swift */,
+				41375A0126F5E3370087C8E9 /* ProductRepository.swift */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -299,7 +299,7 @@
 				411BE22726F51AF600D8168F /* DataDependencyManager.swift in Sources */,
 				413EB01926F5EA3900227D51 /* NetworkManager.swift in Sources */,
 				41375A0D26F5E8350087C8E9 /* NetworkProduct.swift in Sources */,
-				41375A0226F5E3370087C8E9 /* ProductListRepository.swift in Sources */,
+				41375A0226F5E3370087C8E9 /* ProductRepository.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

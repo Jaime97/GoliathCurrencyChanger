@@ -1,5 +1,5 @@
 //
-//  ProductListRepository.swift
+//  ProductRepository.swift
 //  Data
 //
 //  Created by Jaime Alcántara on 18/09/2021.
@@ -8,7 +8,7 @@
 import Foundation
 import Domain
 
-class ProductListRepository: ProductListRepositoryProtocol {
+class ProductRepository: ProductRepositoryProtocol {
     
     private let networkManager: Networkable
     

@@ -16,8 +16,8 @@ public class DataDependencyManager {
             NetworkManager()
         }
         
-        container.register(ProductListRepositoryProtocol.self) { r in
-            ProductListRepository(networkManager: r.resolve(Networkable.self)!)
+        container.register(ProductRepositoryProtocol.self) { r in
+            ProductRepository(networkManager: r.resolve(Networkable.self)!)
         }
     }
 }

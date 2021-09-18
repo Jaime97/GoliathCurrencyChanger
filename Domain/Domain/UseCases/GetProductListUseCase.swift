@@ -15,15 +15,15 @@ public protocol GetProductListUseCaseProtocol {
 
 class GetProductListUseCase: GetProductListUseCaseProtocol {
 
-    let productListRepository: ProductListRepositoryProtocol
+    let productRepository: ProductRepositoryProtocol
     
-    init(productListRepository: ProductListRepositoryProtocol) {
-        self.productListRepository = productListRepository
+    init(productRepository: ProductRepositoryProtocol) {
+        self.productRepository = productRepository
     }
     
     func execute(completion: @escaping (Result<[String], Error>) -> ()) {
         DispatchQueue.global().async {
-            self.productListRepository.getProductList(completion: { result in
+            self.productRepository.getProductList(completion: { result in
                 DispatchQueue.main.async {
                     switch result {
                     case .success(let productList):
