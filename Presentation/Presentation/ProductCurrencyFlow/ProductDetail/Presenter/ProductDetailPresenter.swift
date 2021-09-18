@@ -43,11 +43,11 @@ extension ProductDetailPresenter: ProductDetailPresenterProtocol {
     func onViewShowed() {
         if(!self.initialConfigurationDone) {
             self.initialConfigurationDone = true
+            self.productDetailView.addProductCodeToTitle(productCode: self.productCode)
             self.getProductAmountsUseCase.execute(productCode: self.productCode) { result in
                 self.manageAmountsResult(result: result)
             }
         }
     }
-    
     
 }

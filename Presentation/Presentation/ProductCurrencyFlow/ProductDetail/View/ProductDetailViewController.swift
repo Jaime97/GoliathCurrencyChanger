@@ -54,4 +54,11 @@ extension ProductDetailViewController: ProductDetailViewProtocol {
         self.transactionTableView.reloadData()
     }
     
+    func addProductCodeToTitle(productCode: String) {
+        self.productCodeLabel.text = productCode
+    }
+    
+    func addTotalAmountForThisProduct(totalAmount: String) {
+        self.totalAmountLabel.text = totalAmount
+    }
 }
