@@ -8,32 +8,23 @@
 import Foundation
 import Domain
 
-class ProductRepository: ProductRepositoryProtocol {
+class ProductRepository {
     
     private let networkManager: Networkable
+    private let memoryStorageManager: MemoryStorageManagerProtocol
     
-    init(networkManager: Networkable) {
+    init(networkManager: Networkable, memoryStorageManager: MemoryStorageManagerProtocol) {
         self.networkManager = networkManager
+        self.memoryStorageManager = memoryStorageManager
     }
     
-    func getProductList(completion: @escaping (Result<[Product], Error>) -> ()) {
-        self.networkManager.fetchProducts(completion: { result in
-            switch result {
-            case .success(let productList):
-                completion(.success(self.mapNetworkProductArrayToProductArray(networkProductList: productList)))
-            case .failure(let error):
-                completion(.failure(error))
-            }
-        })
-    }
-    
-    func mapNetworkProductArrayToProductArray(networkProductList: [NetworkProduct]) -> [Product] {
-        var productList = [Product]()
+    func mapNetworkProductArrayToDataProductArray(networkProductList: [NetworkProduct]) -> [DataProduct] {
+        var productList = [DataProduct]()
         for networkProduct in networkProductList {
-            if let product = productList.first(where: { $0.getProductCode() == networkProduct.sku}) {
+            if let product = productList.first(where: { $0.getSku() == networkProduct.sku}) {
                 product.addAmount(amount: networkProduct.amount.toDecimal()!, currency: networkProduct.currency)
             } else {
-                let newProduct = Product(productCode: networkProduct.sku)
+                let newProduct = DataProduct(sku: networkProduct.sku)
                 newProduct.addAmount(amount: networkProduct.amount.toDecimal()!, currency: networkProduct.currency)
                 productList.append(newProduct)
             }
@@ -42,11 +33,33 @@ class ProductRepository: ProductRepositoryProtocol {
     }
 }
 
-extension String {
-    func toDecimal() -> Decimal? {
-        let formatter = NumberFormatter()
-        formatter.generatesDecimalNumbers = true
-        formatter.numberStyle = NumberFormatter.Style.decimal
-        return formatter.number(from: self.description) as? Decimal
+extension ProductRepository: ProductRepositoryProtocol {
+    
+    func findProductInProductList(productCode: String) -> Product? {
+        return self.memoryStorageManager.findProductBySku(sku: productCode)?.toProduct()
+    }
+    
+    func getProductList(completion: @escaping (Result<[Product], Error>) -> ()) {
+        self.networkManager.fetchProducts(completion: { result in
+            switch result {
+            case .success(let productList):
+                let dataProductList = self.mapNetworkProductArrayToDataProductArray(networkProductList: productList)
+                self.memoryStorageManager.saveProductList(productList: dataProductList)
+                completion(.success(dataProductList.map {
+                    $0.toProduct()
+                }))
+            case .failure(let error):
+                completion(.failure(error))
+            }
+        })
     }
 }
+
+extension DataProduct {
+    
+    func toProduct() -> Product {
+        return Product(productCode: self.sku, amounts: self.amounts)
+    }
+    
+}
+

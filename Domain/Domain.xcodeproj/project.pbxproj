@@ -10,6 +10,7 @@
 		411BE12B26F4A82500D8168F /* Domain.h in Headers */ = {isa = PBXBuildFile; fileRef = 411BE12926F4A82500D8168F /* Domain.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		411BE1F626F4FED700D8168F /* DomainDependencyManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 411BE1F526F4FED700D8168F /* DomainDependencyManager.swift */; };
 		411BE25426F52BD700D8168F /* GetProductListUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 411BE25326F52BD700D8168F /* GetProductListUseCase.swift */; };
+		413DD30826F6360300BD30B7 /* GetProductAmountsInEurosUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413DD30726F6360300BD30B7 /* GetProductAmountsInEurosUseCase.swift */; };
 		413EB02026F5F4D000227D51 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413EB01F26F5F4D000227D51 /* Product.swift */; };
 		413EB02E26F5F88C00227D51 /* ProductListRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413EB02D26F5F88C00227D51 /* ProductListRepositoryProtocol.swift */; };
 		7FCAAD172E394B457063A997 /* Pods_Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56C21337F1031A14BB8D629A /* Pods_Domain.framework */; };
@@ -22,6 +23,7 @@
 		411BE12A26F4A82500D8168F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		411BE1F526F4FED700D8168F /* DomainDependencyManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DomainDependencyManager.swift; sourceTree = "<group>"; };
 		411BE25326F52BD700D8168F /* GetProductListUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetProductListUseCase.swift; sourceTree = "<group>"; };
+		413DD30726F6360300BD30B7 /* GetProductAmountsInEurosUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetProductAmountsInEurosUseCase.swift; sourceTree = "<group>"; };
 		413EB01F26F5F4D000227D51 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		413EB02D26F5F88C00227D51 /* ProductListRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListRepositoryProtocol.swift; sourceTree = "<group>"; };
 		56C21337F1031A14BB8D629A /* Pods_Domain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Domain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -75,6 +77,7 @@
 			isa = PBXGroup;
 			children = (
 				411BE25326F52BD700D8168F /* GetProductListUseCase.swift */,
+				413DD30726F6360300BD30B7 /* GetProductAmountsInEurosUseCase.swift */,
 			);
 			path = UseCases;
 			sourceTree = "<group>";
@@ -229,6 +232,7 @@
 				411BE25426F52BD700D8168F /* GetProductListUseCase.swift in Sources */,
 				413EB02E26F5F88C00227D51 /* ProductListRepositoryProtocol.swift in Sources */,
 				411BE1F626F4FED700D8168F /* DomainDependencyManager.swift in Sources */,
+				413DD30826F6360300BD30B7 /* GetProductAmountsInEurosUseCase.swift in Sources */,
 				413EB02026F5F4D000227D51 /* Product.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

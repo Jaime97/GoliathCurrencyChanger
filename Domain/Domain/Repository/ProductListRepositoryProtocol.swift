@@ -11,4 +11,6 @@ public protocol ProductRepositoryProtocol {
     
     func getProductList(completion: @escaping (Result<[Product], Error>) -> ())
     
+    func findProductInProductList(productCode:String) -> Product?
+    
 }

@@ -11,13 +11,9 @@ public class Product {
     let productCode: String
     var amounts: [(Decimal, String)]
     
-    public init(productCode:String) {
+    public init(productCode:String, amounts: [(Decimal, String)]) {
         self.productCode = productCode
-        self.amounts = [(Decimal, String)]()
-    }
-    
-    public func addAmount(amount:Decimal, currency:String) {
-        self.amounts.append((amount, currency))
+        self.amounts = amounts
     }
     
     public func getProductCode() -> String {

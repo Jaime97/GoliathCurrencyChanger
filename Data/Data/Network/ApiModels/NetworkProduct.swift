@@ -1,5 +1,5 @@
 //
-//  ProductApiProduct.swift
+//  NetworkProduct.swift
 //  Data
 //
 //  Created by Jaime Alcántara on 18/09/2021.

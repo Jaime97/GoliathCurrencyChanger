@@ -16,8 +16,12 @@ public class DataDependencyManager {
             NetworkManager()
         }
         
+        container.register(MemoryStorageManagerProtocol.self) { r in
+            MemoryStorageManager()
+        }
+        
         container.register(ProductRepositoryProtocol.self) { r in
-            ProductRepository(networkManager: r.resolve(Networkable.self)!)
+            ProductRepository(networkManager: r.resolve(Networkable.self)!, memoryStorageManager: r.resolve(MemoryStorageManagerProtocol.self)!)
         }
     }
 }
