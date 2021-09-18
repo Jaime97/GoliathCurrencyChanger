@@ -13,5 +13,9 @@ public class DomainDependencyManager {
         container.register(GetProductListUseCaseProtocol.self) { r in
             GetProductListUseCase(productRepository: r.resolve(ProductRepositoryProtocol.self)!)
         }
+        
+        container.register(GetProductAmountsUseCaseProtocol.self) { r in
+            GetProductAmountsUseCase(productRepository: r.resolve(ProductRepositoryProtocol.self)!)
+        }
     }
 }

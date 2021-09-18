@@ -6,22 +6,48 @@
 //
 
 import Foundation
+import Domain
 
 protocol ProductDetailPresenterProtocol {
-    var productName: String! { get set }
+    var productCode: String! { get set }
+    
+    func onViewShowed()
 }
 
 class ProductDetailPresenter {
 
     let productDetailView: ProductDetailViewProtocol
-    var productName: String!
+    let getProductAmountsUseCase: GetProductAmountsUseCaseProtocol
+    var productCode: String!
+    var initialConfigurationDone : Bool
     
-    init(productDetailView: ProductDetailViewProtocol) {
+    init(productDetailView: ProductDetailViewProtocol, getProductAmountsUseCase: GetProductAmountsUseCaseProtocol) {
+        self.initialConfigurationDone = false
         self.productDetailView = productDetailView
+        self.getProductAmountsUseCase = getProductAmountsUseCase
+    }
+    
+    func manageAmountsResult(result: Result<[(Decimal, String)], GetProductError>) {
+        switch result {
+        case .success(let transactionList):
+            self.productDetailView.showTransactionList(transactions: transactionList.map { "\($0.0)" + " " + $0.1 })
+        case .failure(let error):
+            print("Error: " + error.localizedDescription)
+        }
     }
     
 }
 
 extension ProductDetailPresenter: ProductDetailPresenterProtocol {
+    
+    func onViewShowed() {
+        if(!self.initialConfigurationDone) {
+            self.initialConfigurationDone = true
+            self.getProductAmountsUseCase.execute(productCode: self.productCode) { result in
+                self.manageAmountsResult(result: result)
+            }
+        }
+    }
+    
     
 }

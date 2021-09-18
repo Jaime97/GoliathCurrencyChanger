@@ -9,4 +9,6 @@ import Foundation
 
 protocol ProductDetailViewProtocol {
     
+    func showTransactionList(transactions: [String])
+    
 }
