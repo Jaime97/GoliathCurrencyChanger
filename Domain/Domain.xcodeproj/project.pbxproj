@@ -127,14 +127,13 @@
 		411BE12826F4A82500D8168F /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				413B8CCF26F7FACE005DF18A /* Support files */,
 				413EB02C26F5F87800227D51 /* Repository */,
 				411BE1F426F4FEC100D8168F /* DI */,
 				411BE1BC26F4E2FA00D8168F /* Entities */,
 				411BE1BB26F4E2F200D8168F /* UseCases */,
 				411BE12926F4A82500D8168F /* Domain.h */,
 				411BE12A26F4A82500D8168F /* Info.plist */,
-				413DD31B26F64F8D00BD30B7 /* CurrencyConversor.swift */,
-				413B8CCB26F7F473005DF18A /* Decimal+Round.swift */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
@@ -180,6 +179,15 @@
 				413B8BE026F79697005DF18A /* Common.framework */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		413B8CCF26F7FACE005DF18A /* Support files */ = {
+			isa = PBXGroup;
+			children = (
+				413DD31B26F64F8D00BD30B7 /* CurrencyConversor.swift */,
+				413B8CCB26F7F473005DF18A /* Decimal+Round.swift */,
+			);
+			path = "Support files";
 			sourceTree = "<group>";
 		};
 		413EB02C26F5F87800227D51 /* Repository */ = {

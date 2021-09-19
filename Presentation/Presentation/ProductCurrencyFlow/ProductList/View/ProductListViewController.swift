@@ -17,6 +17,7 @@ class ProductListViewController: UIViewController {
     @IBOutlet weak var loadingProductsActivityIndicator: UIActivityIndicatorView!
     
     var presenter: ProductListPresenterProtocol!
+    var alertManager: AlertManager!
     private var productList:[String] = [String]()
     private let refreshControl = UIRefreshControl()
     
@@ -77,9 +78,7 @@ extension ProductListViewController: ProductListViewProtocol {
     }
     
     func showAlert(title:String, message:String, buttonTitle:String) {
-        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: buttonTitle, style: .default, handler:nil))
-        self.present(alert, animated: true, completion: nil)
+        self.alertManager.showAlert(title: title, message: message, buttonTitle: buttonTitle, viewController: self)
     }
     
     func addRefreshToTable(refreshMessage:String) {

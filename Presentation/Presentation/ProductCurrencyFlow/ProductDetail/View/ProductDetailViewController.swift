@@ -25,6 +25,7 @@ class ProductDetailViewController: UIViewController {
     
     
     var presenter: ProductDetailPresenterProtocol!
+    var alertManager: AlertManager!
 
     var transactionList:[String] = [String]()
     
@@ -77,5 +78,9 @@ extension ProductDetailViewController: ProductDetailViewProtocol {
     func setTotalAmountActivityIndicatorVisibility(visible:Bool) {
         visible ? (self.TotalAmountActivityIndicator.alpha = 1) : (self.TotalAmountActivityIndicator.alpha = 0)
         visible ? self.TotalAmountActivityIndicator.startAnimating() : self.TotalAmountActivityIndicator.stopAnimating()
+    }
+    
+    func showAlert(title:String, message:String, buttonTitle:String) {
+        self.alertManager.showAlert(title: title, message: message, buttonTitle: buttonTitle, viewController: self)
     }
 }

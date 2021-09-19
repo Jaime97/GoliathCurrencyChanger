@@ -20,6 +20,7 @@
 		411BE1EF26F4F60F00D8168F /* PresentationDependencyManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 411BE1EE26F4F60F00D8168F /* PresentationDependencyManager.swift */; };
 		413B8BF126F796E2005DF18A /* Common.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 413B8BE626F796A4005DF18A /* Common.framework */; };
 		413B8BF226F796E2005DF18A /* Common.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 413B8BE626F796A4005DF18A /* Common.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		413B8CD726F7FB11005DF18A /* AlertManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413B8CD626F7FB11005DF18A /* AlertManager.swift */; };
 		413EB03226F5FBC000227D51 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 413EB03126F5FBC000227D51 /* Localizable.strings */; };
 		413EB04126F615F900227D51 /* ProductDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413EB03F26F615F900227D51 /* ProductDetailViewController.swift */; };
 		413EB04226F615F900227D51 /* ProductDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 413EB04026F615F900227D51 /* ProductDetailViewController.xib */; };
@@ -42,6 +43,13 @@
 			proxyType = 2;
 			remoteGlobalIDString = 413B8BC426F795CE005DF18A;
 			remoteInfo = Common;
+		};
+		413B8CD426F7FB01005DF18A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 411BE1A726F4BB0600D8168F /* Domain.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 413FA87826F78374008ECD1D;
+			remoteInfo = DomainTests;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -74,6 +82,7 @@
 		411BE1D926F4F0BA00D8168F /* ProductCurrencyCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCurrencyCoordinator.swift; sourceTree = "<group>"; };
 		411BE1EE26F4F60F00D8168F /* PresentationDependencyManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentationDependencyManager.swift; sourceTree = "<group>"; };
 		413B8BE126F796A4005DF18A /* Common.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Common.xcodeproj; path = ../Common/Common.xcodeproj; sourceTree = "<group>"; };
+		413B8CD626F7FB11005DF18A /* AlertManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertManager.swift; sourceTree = "<group>"; };
 		413EB03126F5FBC000227D51 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Localizable.strings; path = ../../GoliathCurrencyChanger/Localizable.strings; sourceTree = "<group>"; };
 		413EB03F26F615F900227D51 /* ProductDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailViewController.swift; sourceTree = "<group>"; };
 		413EB04026F615F900227D51 /* ProductDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductDetailViewController.xib; sourceTree = "<group>"; };
@@ -130,6 +139,7 @@
 		411BE16F26F4B85300D8168F /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				413B8CD026F7FB01005DF18A /* Support files */,
 				411BE1ED26F4F5E900D8168F /* DI */,
 				411BE1A526F4B98F00D8168F /* ProductCurrencyFlow */,
 				411BE17026F4B85300D8168F /* Presentation.h */,
@@ -164,6 +174,7 @@
 			isa = PBXGroup;
 			children = (
 				411BE1AC26F4BB0600D8168F /* Domain.framework */,
+				413B8CD526F7FB01005DF18A /* DomainTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -217,6 +228,14 @@
 				413B8BE626F796A4005DF18A /* Common.framework */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		413B8CD026F7FB01005DF18A /* Support files */ = {
+			isa = PBXGroup;
+			children = (
+				413B8CD626F7FB11005DF18A /* AlertManager.swift */,
+			);
+			path = "Support files";
 			sourceTree = "<group>";
 		};
 		413EB03C26F6159D00227D51 /* ProductDetail */ = {
@@ -345,6 +364,13 @@
 			remoteRef = 413B8BE526F796A4005DF18A /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
+		413B8CD526F7FB01005DF18A /* DomainTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = DomainTests.xctest;
+			remoteRef = 413B8CD426F7FB01005DF18A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 /* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
@@ -391,6 +417,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				411BE1CB26F4EA2C00D8168F /* AppCoordinator.swift in Sources */,
+				413B8CD726F7FB11005DF18A /* AlertManager.swift in Sources */,
 				413EB04426F6160D00227D51 /* ProductDetailPresenter.swift in Sources */,
 				411BE1C026F4E36700D8168F /* ProductListViewProtocol.swift in Sources */,
 				413EB04626F6162100227D51 /* ProductDetailViewProtocol.swift in Sources */,
