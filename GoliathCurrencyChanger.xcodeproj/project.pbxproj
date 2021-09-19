@@ -16,6 +16,7 @@
 		411BE19A26F4B94800D8168F /* Data.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 411BE19926F4B94200D8168F /* Data.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		411BE19B26F4B94C00D8168F /* Presentation.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 411BE19326F4B92900D8168F /* Presentation.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		411BE1D526F4EEE000D8168F /* AppDelegate+Setup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 411BE1D426F4EEE000D8168F /* AppDelegate+Setup.swift */; };
+		413B8BD926F79669005DF18A /* Common.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 413B8BD526F79651005DF18A /* Common.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		5C2966118FE54122D37950A0 /* Pods_GoliathCurrencyChanger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7059F17DBE9C1988BEEDC93A /* Pods_GoliathCurrencyChanger.framework */; };
 /* End PBXBuildFile section */
 
@@ -55,6 +56,13 @@
 			remoteGlobalIDString = 411BE14F26F4B81300D8168F;
 			remoteInfo = Data;
 		};
+		413B8BD426F79651005DF18A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 413B8BD026F79651005DF18A /* Common.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 413B8BC426F795CE005DF18A;
+			remoteInfo = Common;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -64,6 +72,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				413B8BD926F79669005DF18A /* Common.framework in Copy Frameworks */,
 				411BE14426F4AB4300D8168F /* Domain.framework in Copy Frameworks */,
 				411BE19A26F4B94800D8168F /* Data.framework in Copy Frameworks */,
 				411BE19B26F4B94C00D8168F /* Presentation.framework in Copy Frameworks */,
@@ -89,6 +98,7 @@
 		411BE18C26F4B92900D8168F /* Presentation.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Presentation.xcodeproj; path = Presentation/Presentation.xcodeproj; sourceTree = SOURCE_ROOT; };
 		411BE19426F4B94200D8168F /* Data.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Data.xcodeproj; path = Data/Data.xcodeproj; sourceTree = SOURCE_ROOT; };
 		411BE1D426F4EEE000D8168F /* AppDelegate+Setup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppDelegate+Setup.swift"; sourceTree = "<group>"; };
+		413B8BD026F79651005DF18A /* Common.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Common.xcodeproj; path = Common/Common.xcodeproj; sourceTree = SOURCE_ROOT; };
 		4E033ADC47E33AAE4A36A7D3 /* Pods-GoliathCurrencyChanger.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoliathCurrencyChanger.release.xcconfig"; path = "Target Support Files/Pods-GoliathCurrencyChanger/Pods-GoliathCurrencyChanger.release.xcconfig"; sourceTree = "<group>"; };
 		7059F17DBE9C1988BEEDC93A /* Pods_GoliathCurrencyChanger.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GoliathCurrencyChanger.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E15056B771B9E58ECAAADFB2 /* Pods-GoliathCurrencyChanger.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoliathCurrencyChanger.debug.xcconfig"; path = "Target Support Files/Pods-GoliathCurrencyChanger/Pods-GoliathCurrencyChanger.debug.xcconfig"; sourceTree = "<group>"; };
@@ -176,6 +186,7 @@
 		411BE13C26F4AAE300D8168F /* Dependencies */ = {
 			isa = PBXGroup;
 			children = (
+				413B8BD026F79651005DF18A /* Common.xcodeproj */,
 				411BE19426F4B94200D8168F /* Data.xcodeproj */,
 				411BE18C26F4B92900D8168F /* Presentation.xcodeproj */,
 				411BE13D26F4AAF700D8168F /* Domain.xcodeproj */,
@@ -213,6 +224,14 @@
 				411BE1D426F4EEE000D8168F /* AppDelegate+Setup.swift */,
 			);
 			path = "Support files";
+			sourceTree = "<group>";
+		};
+		413B8BD126F79651005DF18A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				413B8BD526F79651005DF18A /* Common.framework */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 		CD9A31C64626E4009E04301F /* Pods */ = {
@@ -326,6 +345,10 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
+					ProductGroup = 413B8BD126F79651005DF18A /* Products */;
+					ProjectRef = 413B8BD026F79651005DF18A /* Common.xcodeproj */;
+				},
+				{
 					ProductGroup = 411BE19526F4B94200D8168F /* Products */;
 					ProjectRef = 411BE19426F4B94200D8168F /* Data.xcodeproj */;
 				},
@@ -367,6 +390,13 @@
 			fileType = wrapper.framework;
 			path = Data.framework;
 			remoteRef = 411BE19826F4B94200D8168F /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		413B8BD526F79651005DF18A /* Common.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Common.framework;
+			remoteRef = 413B8BD426F79651005DF18A /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */

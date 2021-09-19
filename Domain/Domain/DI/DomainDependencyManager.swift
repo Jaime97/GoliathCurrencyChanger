@@ -7,6 +7,7 @@
 
 import Foundation
 import Swinject
+import Common
 
 public class DomainDependencyManager {
     public static func setup(container:Container) {
@@ -15,7 +16,7 @@ public class DomainDependencyManager {
         }
         
         container.register(GetProductAmountsUseCaseProtocol.self) { r in
-            GetProductAmountsUseCase(productRepository: r.resolve(ProductRepositoryProtocol.self)!)
+            GetProductAmountsUseCase(productRepository: r.resolve(ProductRepositoryProtocol.self)!, logger: r.resolve(LoggerProtocol.self, name: LogCategory.domain.rawValue)!)
         }
     }
 }

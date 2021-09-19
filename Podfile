@@ -3,43 +3,58 @@ use_frameworks!
 
 workspace 'GoliathCurrencyChanger'
 
+def shared_pods
+    pod 'Swinject', '~> 2.7.1'
+end
+
+# Common module
+def common_pods
+end
+
+target 'Common' do
+  project 'Common/Common.project'
+  shared_pods
+  common_pods
+end
+
 # Presentation module
 def presentation_pods
-  pod 'Swinject', '~> 2.7.1'
 end
 
 target 'Presentation' do
   project 'Presentation/Presentation.project'
+  shared_pods
   presentation_pods
 end
 
 # Domain module
 def domain_pods
-  pod 'Swinject', '~> 2.7.1'
 end
 
 target 'Domain' do
   project 'Domain/Domain.project'
+  shared_pods
   domain_pods
 end
 
 # Data module
 def data_pods
-  pod 'Swinject', '~> 2.7.1'
   pod 'Moya', '~> 15.0'
 end
 
 target 'Data' do
   project 'Data/Data.project'
+  shared_pods
   data_pods
 end
 
 # GoliathCurrencyChanger
 def goliathCurrencyChanger_pods
-  pod 'Swinject', '~> 2.7.1'
+  shared_pods
   presentation_pods
   domain_pods
   data_pods
+  common_pods
 end
 
 target 'GoliathCurrencyChanger' do

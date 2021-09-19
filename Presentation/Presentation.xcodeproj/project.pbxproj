@@ -18,6 +18,8 @@
 		411BE1CF26F4EAB200D8168F /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 411BE1CE26F4EAB200D8168F /* Coordinator.swift */; };
 		411BE1DA26F4F0BA00D8168F /* ProductCurrencyCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 411BE1D926F4F0BA00D8168F /* ProductCurrencyCoordinator.swift */; };
 		411BE1EF26F4F60F00D8168F /* PresentationDependencyManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 411BE1EE26F4F60F00D8168F /* PresentationDependencyManager.swift */; };
+		413B8BF126F796E2005DF18A /* Common.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 413B8BE626F796A4005DF18A /* Common.framework */; };
+		413B8BF226F796E2005DF18A /* Common.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 413B8BE626F796A4005DF18A /* Common.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		413EB03226F5FBC000227D51 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 413EB03126F5FBC000227D51 /* Localizable.strings */; };
 		413EB04126F615F900227D51 /* ProductDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413EB03F26F615F900227D51 /* ProductDetailViewController.swift */; };
 		413EB04226F615F900227D51 /* ProductDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 413EB04026F615F900227D51 /* ProductDetailViewController.xib */; };
@@ -34,6 +36,13 @@
 			remoteGlobalIDString = 411BE12626F4A82500D8168F;
 			remoteInfo = Domain;
 		};
+		413B8BE526F796A4005DF18A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 413B8BE126F796A4005DF18A /* Common.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 413B8BC426F795CE005DF18A;
+			remoteInfo = Common;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -44,6 +53,7 @@
 			dstSubfolderSpec = 10;
 			files = (
 				411BE1AE26F4BBDD00D8168F /* Domain.framework in Embed Frameworks */,
+				413B8BF226F796E2005DF18A /* Common.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -64,6 +74,7 @@
 		411BE1CE26F4EAB200D8168F /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		411BE1D926F4F0BA00D8168F /* ProductCurrencyCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCurrencyCoordinator.swift; sourceTree = "<group>"; };
 		411BE1EE26F4F60F00D8168F /* PresentationDependencyManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentationDependencyManager.swift; sourceTree = "<group>"; };
+		413B8BE126F796A4005DF18A /* Common.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Common.xcodeproj; path = ../Common/Common.xcodeproj; sourceTree = "<group>"; };
 		413EB03126F5FBC000227D51 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Localizable.strings; path = ../../GoliathCurrencyChanger/Localizable.strings; sourceTree = "<group>"; };
 		413EB03F26F615F900227D51 /* ProductDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailViewController.swift; sourceTree = "<group>"; };
 		413EB04026F615F900227D51 /* ProductDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductDetailViewController.xib; sourceTree = "<group>"; };
@@ -78,6 +89,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				413B8BF126F796E2005DF18A /* Common.framework in Frameworks */,
 				411BE1AD26F4BBDD00D8168F /* Domain.framework in Frameworks */,
 				6218BA5D06D5E5C4B0EED7C1 /* Pods_Presentation.framework in Frameworks */,
 			);
@@ -142,6 +154,7 @@
 		411BE1A626F4BAF000D8168F /* Dependencies */ = {
 			isa = PBXGroup;
 			children = (
+				413B8BE126F796A4005DF18A /* Common.xcodeproj */,
 				411BE1A726F4BB0600D8168F /* Domain.xcodeproj */,
 			);
 			name = Dependencies;
@@ -196,6 +209,14 @@
 				411BE1EE26F4F60F00D8168F /* PresentationDependencyManager.swift */,
 			);
 			path = DI;
+			sourceTree = "<group>";
+		};
+		413B8BE226F796A4005DF18A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				413B8BE626F796A4005DF18A /* Common.framework */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 		413EB03C26F6159D00227D51 /* ProductDetail */ = {
@@ -294,6 +315,10 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
+					ProductGroup = 413B8BE226F796A4005DF18A /* Products */;
+					ProjectRef = 413B8BE126F796A4005DF18A /* Common.xcodeproj */;
+				},
+				{
 					ProductGroup = 411BE1A826F4BB0600D8168F /* Products */;
 					ProjectRef = 411BE1A726F4BB0600D8168F /* Domain.xcodeproj */;
 				},
@@ -311,6 +336,13 @@
 			fileType = wrapper.framework;
 			path = Domain.framework;
 			remoteRef = 411BE1AB26F4BB0600D8168F /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		413B8BE626F796A4005DF18A /* Common.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Common.framework;
+			remoteRef = 413B8BE526F796A4005DF18A /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */

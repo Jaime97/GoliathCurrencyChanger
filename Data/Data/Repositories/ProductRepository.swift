@@ -7,15 +7,18 @@
 
 import Foundation
 import Domain
+import Common
 
 class ProductRepository {
     
     private let networkManager: Networkable
     private let memoryStorageManager: MemoryStorageManagerProtocol
+    private let logger: LoggerProtocol
     
-    init(networkManager: Networkable, memoryStorageManager: MemoryStorageManagerProtocol) {
+    init(networkManager: Networkable, memoryStorageManager: MemoryStorageManagerProtocol, logger: LoggerProtocol) {
         self.networkManager = networkManager
         self.memoryStorageManager = memoryStorageManager
+        self.logger = logger
     }
     
     func mapNetworkProductArrayToDataProductArray(networkProductList: [NetworkProduct]) -> [DataProduct] {
@@ -49,6 +52,7 @@ extension ProductRepository: ProductRepositoryProtocol {
                     $0.toProduct()
                 }))
             case .failure(let error):
+                self.logger.logError(event: "Error getting the product list. Error: " + error.localizedDescription, isPrivate: false)
                 completion(.failure(error))
             }
         }
@@ -60,6 +64,7 @@ extension ProductRepository: ProductRepositoryProtocol {
             case .success(let currencyConversionList):
                 completion(.success(currencyConversionList.map { $0.toCurrencyConversion() }))
             case .failure(let error):
+                self.logger.logError(event: "Error getting the currency conversions. Error: " + error.localizedDescription, isPrivate: false)
                 completion(.failure(error))
             }
         }

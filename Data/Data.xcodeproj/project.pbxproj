@@ -12,6 +12,8 @@
 		41375A0226F5E3370087C8E9 /* ProductRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41375A0126F5E3370087C8E9 /* ProductRepository.swift */; };
 		41375A0526F5E4280087C8E9 /* ProductApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41375A0426F5E4280087C8E9 /* ProductApi.swift */; };
 		41375A0D26F5E8350087C8E9 /* NetworkProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41375A0C26F5E8350087C8E9 /* NetworkProduct.swift */; };
+		413B8BEF26F796D9005DF18A /* Common.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 413B8BED26F796B5005DF18A /* Common.framework */; };
+		413B8BF026F796D9005DF18A /* Common.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 413B8BED26F796B5005DF18A /* Common.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		413DD30C26F637BC00BD30B7 /* MemoryStorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413DD30B26F637BC00BD30B7 /* MemoryStorageManager.swift */; };
 		413DD30F26F6382D00BD30B7 /* DataProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413DD30E26F6382D00BD30B7 /* DataProduct.swift */; };
 		413DD31126F63B4C00BD30B7 /* String+Decimal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413DD31026F63B4C00BD30B7 /* String+Decimal.swift */; };
@@ -24,6 +26,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		413B8BEC26F796B5005DF18A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 413B8BE826F796B5005DF18A /* Common.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 413B8BC426F795CE005DF18A;
+			remoteInfo = Common;
+		};
 		413EB02726F5F5C100227D51 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 413EB02326F5F5C100227D51 /* Domain.xcodeproj */;
@@ -41,6 +50,7 @@
 			dstSubfolderSpec = 10;
 			files = (
 				413EB02A26F5F5D000227D51 /* Domain.framework in Embed Frameworks */,
+				413B8BF026F796D9005DF18A /* Common.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -56,6 +66,7 @@
 		41375A0126F5E3370087C8E9 /* ProductRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductRepository.swift; sourceTree = "<group>"; };
 		41375A0426F5E4280087C8E9 /* ProductApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductApi.swift; sourceTree = "<group>"; };
 		41375A0C26F5E8350087C8E9 /* NetworkProduct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkProduct.swift; sourceTree = "<group>"; };
+		413B8BE826F796B5005DF18A /* Common.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Common.xcodeproj; path = ../../Common/Common.xcodeproj; sourceTree = "<group>"; };
 		413DD30B26F637BC00BD30B7 /* MemoryStorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryStorageManager.swift; sourceTree = "<group>"; };
 		413DD30E26F6382D00BD30B7 /* DataProduct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataProduct.swift; sourceTree = "<group>"; };
 		413DD31026F63B4C00BD30B7 /* String+Decimal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Decimal.swift"; sourceTree = "<group>"; };
@@ -72,6 +83,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				413B8BEF26F796D9005DF18A /* Common.framework in Frameworks */,
 				413EB02926F5F5D000227D51 /* Domain.framework in Frameworks */,
 				53857B7522C2E5D2A6ECC422 /* Pods_Data.framework in Frameworks */,
 			);
@@ -150,6 +162,14 @@
 			path = ApiModels;
 			sourceTree = "<group>";
 		};
+		413B8BE926F796B5005DF18A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				413B8BED26F796B5005DF18A /* Common.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		413DD30A26F637A300BD30B7 /* MemoryStorage */ = {
 			isa = PBXGroup;
 			children = (
@@ -169,6 +189,7 @@
 		413EB02226F5F54900227D51 /* Dependencies */ = {
 			isa = PBXGroup;
 			children = (
+				413B8BE826F796B5005DF18A /* Common.xcodeproj */,
 				413EB02326F5F5C100227D51 /* Domain.xcodeproj */,
 			);
 			path = Dependencies;
@@ -261,6 +282,10 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
+					ProductGroup = 413B8BE926F796B5005DF18A /* Products */;
+					ProjectRef = 413B8BE826F796B5005DF18A /* Common.xcodeproj */;
+				},
+				{
 					ProductGroup = 413EB02426F5F5C100227D51 /* Products */;
 					ProjectRef = 413EB02326F5F5C100227D51 /* Domain.xcodeproj */;
 				},
@@ -273,6 +298,13 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
+		413B8BED26F796B5005DF18A /* Common.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Common.framework;
+			remoteRef = 413B8BEC26F796B5005DF18A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 		413EB02826F5F5C100227D51 /* Domain.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;

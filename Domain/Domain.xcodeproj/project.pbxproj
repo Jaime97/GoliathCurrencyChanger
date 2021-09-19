@@ -10,12 +10,38 @@
 		411BE12B26F4A82500D8168F /* Domain.h in Headers */ = {isa = PBXBuildFile; fileRef = 411BE12926F4A82500D8168F /* Domain.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		411BE1F626F4FED700D8168F /* DomainDependencyManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 411BE1F526F4FED700D8168F /* DomainDependencyManager.swift */; };
 		411BE25426F52BD700D8168F /* GetProductListUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 411BE25326F52BD700D8168F /* GetProductListUseCase.swift */; };
+		413B8BF626F796EC005DF18A /* Common.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 413B8BE026F79697005DF18A /* Common.framework */; };
+		413B8BF726F796EC005DF18A /* Common.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 413B8BE026F79697005DF18A /* Common.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		413DD30826F6360300BD30B7 /* GetProductAmountsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413DD30726F6360300BD30B7 /* GetProductAmountsUseCase.swift */; };
 		413DD31526F640EF00BD30B7 /* CurrencyConversion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413DD31426F640EF00BD30B7 /* CurrencyConversion.swift */; };
 		413EB02026F5F4D000227D51 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413EB01F26F5F4D000227D51 /* Product.swift */; };
 		413EB02E26F5F88C00227D51 /* ProductListRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413EB02D26F5F88C00227D51 /* ProductListRepositoryProtocol.swift */; };
 		7FCAAD172E394B457063A997 /* Pods_Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56C21337F1031A14BB8D629A /* Pods_Domain.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		413B8BDF26F79697005DF18A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 413B8BDB26F79697005DF18A /* Common.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 413B8BC426F795CE005DF18A;
+			remoteInfo = Common;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		413B8BF826F796EC005DF18A /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				413B8BF726F796EC005DF18A /* Common.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		0ABFCD0AA2044FF533805BF8 /* Pods-Domain.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Domain.debug.xcconfig"; path = "Target Support Files/Pods-Domain/Pods-Domain.debug.xcconfig"; sourceTree = "<group>"; };
@@ -24,6 +50,7 @@
 		411BE12A26F4A82500D8168F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		411BE1F526F4FED700D8168F /* DomainDependencyManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DomainDependencyManager.swift; sourceTree = "<group>"; };
 		411BE25326F52BD700D8168F /* GetProductListUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetProductListUseCase.swift; sourceTree = "<group>"; };
+		413B8BDB26F79697005DF18A /* Common.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Common.xcodeproj; path = ../../Common/Common.xcodeproj; sourceTree = "<group>"; };
 		413DD30726F6360300BD30B7 /* GetProductAmountsUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetProductAmountsUseCase.swift; sourceTree = "<group>"; };
 		413DD31426F640EF00BD30B7 /* CurrencyConversion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyConversion.swift; sourceTree = "<group>"; };
 		413EB01F26F5F4D000227D51 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
@@ -38,6 +65,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7FCAAD172E394B457063A997 /* Pods_Domain.framework in Frameworks */,
+				413B8BF626F796EC005DF18A /* Common.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -47,6 +75,7 @@
 		411BE11C26F4A82500D8168F = {
 			isa = PBXGroup;
 			children = (
+				413B8BDA26F7968B005DF18A /* Dependencies */,
 				411BE12826F4A82500D8168F /* Domain */,
 				411BE12726F4A82500D8168F /* Products */,
 				FB3D64B6C2977695FBB82890 /* Pods */,
@@ -101,6 +130,22 @@
 			path = DI;
 			sourceTree = "<group>";
 		};
+		413B8BDA26F7968B005DF18A /* Dependencies */ = {
+			isa = PBXGroup;
+			children = (
+				413B8BDB26F79697005DF18A /* Common.xcodeproj */,
+			);
+			path = Dependencies;
+			sourceTree = "<group>";
+		};
+		413B8BDC26F79697005DF18A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				413B8BE026F79697005DF18A /* Common.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		413EB02C26F5F87800227D51 /* Repository */ = {
 			isa = PBXGroup;
 			children = (
@@ -150,6 +195,7 @@
 				411BE12226F4A82500D8168F /* Sources */,
 				411BE12326F4A82500D8168F /* Frameworks */,
 				411BE12426F4A82500D8168F /* Resources */,
+				413B8BF826F796EC005DF18A /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -185,12 +231,28 @@
 			mainGroup = 411BE11C26F4A82500D8168F;
 			productRefGroup = 411BE12726F4A82500D8168F /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 413B8BDC26F79697005DF18A /* Products */;
+					ProjectRef = 413B8BDB26F79697005DF18A /* Common.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				411BE12526F4A82500D8168F /* Domain */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		413B8BE026F79697005DF18A /* Common.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Common.framework;
+			remoteRef = 413B8BDF26F79697005DF18A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		411BE12426F4A82500D8168F /* Resources */ = {

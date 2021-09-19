@@ -8,6 +8,7 @@
 import Foundation
 import Swinject
 import Domain
+import Common
 
 public class DataDependencyManager {
     public static func setup(container:Container) {
@@ -21,7 +22,7 @@ public class DataDependencyManager {
         }.inObjectScope(.container)
         
         container.register(ProductRepositoryProtocol.self) { r in
-            ProductRepository(networkManager: r.resolve(Networkable.self)!, memoryStorageManager: r.resolve(MemoryStorageManagerProtocol.self)!)
+            ProductRepository(networkManager: r.resolve(Networkable.self)!, memoryStorageManager: r.resolve(MemoryStorageManagerProtocol.self)!, logger: r.resolve(LoggerProtocol.self, name: LogCategory.data.rawValue)!)
         }
     }
 }
