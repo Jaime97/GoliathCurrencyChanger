@@ -29,7 +29,7 @@ public class PresentationDependencyManager {
             }
         
         container.register(ProductDetailPresenterProtocol.self) { r in
-            ProductDetailPresenter(productDetailView: r.resolve(ProductDetailViewProtocol.self)!, getProductAmountsUseCase: r.resolve(GetProductAmountsUseCaseProtocol.self)!)
+            ProductDetailPresenter(productDetailView: r.resolve(ProductDetailViewProtocol.self)!, getProductTransactionsUseCase: r.resolve(GetProductTransactionsUseCaseProtocol.self)!, getTransactionTotalUseCase: r.resolve(GetTransactionTotalUseCaseProtocol.self)!)
         }
     }
     

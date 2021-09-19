@@ -35,6 +35,11 @@ target 'Domain' do
   project 'Domain/Domain.project'
   shared_pods
   domain_pods
+  
+  target 'DomainTests' do
+      inherit! :search_paths
+      domain_pods
+    end
 end
 
 # Data module

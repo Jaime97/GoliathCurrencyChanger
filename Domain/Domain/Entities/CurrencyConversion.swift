@@ -16,4 +16,12 @@ public class CurrencyConversion {
         self.currencyPair = currencyPair
         self.rate = rate
     }
+    
+    func getCurrencyPair() -> (String, String) {
+        return self.currencyPair
+    }
+    
+    func getRate() -> Decimal {
+        return self.rate
+    }
 }

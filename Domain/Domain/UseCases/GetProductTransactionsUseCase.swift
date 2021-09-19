@@ -12,13 +12,13 @@ public enum GetProductError: Error {
     case productNotFound
 }
 
-public protocol GetProductAmountsUseCaseProtocol {
+public protocol GetProductTransactionsUseCaseProtocol {
     
     func execute(productCode:String, completion: @escaping (Result<[(Decimal, String)], GetProductError>) -> ())
     
 }
 
-class GetProductAmountsUseCase: GetProductAmountsUseCaseProtocol {
+class GetProductTransactionsUseCase: GetProductTransactionsUseCaseProtocol {
 
     private let productRepository: ProductRepositoryProtocol
     private let logger: LoggerProtocol
@@ -30,7 +30,7 @@ class GetProductAmountsUseCase: GetProductAmountsUseCaseProtocol {
     
     func execute(productCode:String, completion: @escaping (Result<[(Decimal, String)], GetProductError>) -> ()) {
         if let product = self.productRepository.findProductInProductList(productCode: productCode) {
-            completion(.success(product.amounts))
+            completion(.success(product.getProductTransactions()))
         } else {
             self.logger.logError(event: "Product " + productCode + " not found in list", isPrivate: true)
             completion(.failure(.productNotFound))

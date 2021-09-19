@@ -17,7 +17,7 @@
 		411BE19B26F4B94C00D8168F /* Presentation.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 411BE19326F4B92900D8168F /* Presentation.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		411BE1D526F4EEE000D8168F /* AppDelegate+Setup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 411BE1D426F4EEE000D8168F /* AppDelegate+Setup.swift */; };
 		413B8BD926F79669005DF18A /* Common.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 413B8BD526F79651005DF18A /* Common.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		5C2966118FE54122D37950A0 /* Pods_GoliathCurrencyChanger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7059F17DBE9C1988BEEDC93A /* Pods_GoliathCurrencyChanger.framework */; };
+		DD4108E24DA3A63E5A67B1D2 /* Pods_GoliathCurrencyChanger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED602C40F4A3AE1BA109E217 /* Pods_GoliathCurrencyChanger.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +83,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		164AE905C42E1AE34C808A36 /* Pods-GoliathCurrencyChanger.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoliathCurrencyChanger.release.xcconfig"; path = "Target Support Files/Pods-GoliathCurrencyChanger/Pods-GoliathCurrencyChanger.release.xcconfig"; sourceTree = "<group>"; };
 		410EA6E126F49D160026A1A7 /* GoliathCurrencyChanger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GoliathCurrencyChanger.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		410EA6E426F49D160026A1A7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		410EA6ED26F49D170026A1A7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -99,9 +100,8 @@
 		411BE19426F4B94200D8168F /* Data.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Data.xcodeproj; path = Data/Data.xcodeproj; sourceTree = SOURCE_ROOT; };
 		411BE1D426F4EEE000D8168F /* AppDelegate+Setup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppDelegate+Setup.swift"; sourceTree = "<group>"; };
 		413B8BD026F79651005DF18A /* Common.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Common.xcodeproj; path = Common/Common.xcodeproj; sourceTree = SOURCE_ROOT; };
-		4E033ADC47E33AAE4A36A7D3 /* Pods-GoliathCurrencyChanger.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoliathCurrencyChanger.release.xcconfig"; path = "Target Support Files/Pods-GoliathCurrencyChanger/Pods-GoliathCurrencyChanger.release.xcconfig"; sourceTree = "<group>"; };
-		7059F17DBE9C1988BEEDC93A /* Pods_GoliathCurrencyChanger.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GoliathCurrencyChanger.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		E15056B771B9E58ECAAADFB2 /* Pods-GoliathCurrencyChanger.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoliathCurrencyChanger.debug.xcconfig"; path = "Target Support Files/Pods-GoliathCurrencyChanger/Pods-GoliathCurrencyChanger.debug.xcconfig"; sourceTree = "<group>"; };
+		96B2617E6BB36D674CF16DD5 /* Pods-GoliathCurrencyChanger.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoliathCurrencyChanger.debug.xcconfig"; path = "Target Support Files/Pods-GoliathCurrencyChanger/Pods-GoliathCurrencyChanger.debug.xcconfig"; sourceTree = "<group>"; };
+		ED602C40F4A3AE1BA109E217 /* Pods_GoliathCurrencyChanger.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GoliathCurrencyChanger.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,7 +109,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5C2966118FE54122D37950A0 /* Pods_GoliathCurrencyChanger.framework in Frameworks */,
+				DD4108E24DA3A63E5A67B1D2 /* Pods_GoliathCurrencyChanger.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -139,7 +139,7 @@
 				410EA70526F49D170026A1A7 /* GoliathCurrencyChangerUITests */,
 				410EA6E226F49D160026A1A7 /* Products */,
 				CD9A31C64626E4009E04301F /* Pods */,
-				FF5814D5C30CFAF262749F12 /* Frameworks */,
+				A411E2D5C2047BBE9E54DB1B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -234,21 +234,21 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		A411E2D5C2047BBE9E54DB1B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				ED602C40F4A3AE1BA109E217 /* Pods_GoliathCurrencyChanger.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		CD9A31C64626E4009E04301F /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				E15056B771B9E58ECAAADFB2 /* Pods-GoliathCurrencyChanger.debug.xcconfig */,
-				4E033ADC47E33AAE4A36A7D3 /* Pods-GoliathCurrencyChanger.release.xcconfig */,
+				96B2617E6BB36D674CF16DD5 /* Pods-GoliathCurrencyChanger.debug.xcconfig */,
+				164AE905C42E1AE34C808A36 /* Pods-GoliathCurrencyChanger.release.xcconfig */,
 			);
 			path = Pods;
-			sourceTree = "<group>";
-		};
-		FF5814D5C30CFAF262749F12 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				7059F17DBE9C1988BEEDC93A /* Pods_GoliathCurrencyChanger.framework */,
-			);
-			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,12 +258,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 410EA70B26F49D170026A1A7 /* Build configuration list for PBXNativeTarget "GoliathCurrencyChanger" */;
 			buildPhases = (
-				35F5E686F1D353E987A5FF5D /* [CP] Check Pods Manifest.lock */,
+				2D13E0596112BF325AB96308 /* [CP] Check Pods Manifest.lock */,
 				410EA6DD26F49D160026A1A7 /* Sources */,
 				410EA6DE26F49D160026A1A7 /* Frameworks */,
 				410EA6DF26F49D160026A1A7 /* Resources */,
-				9726713CD071C71DEA39E184 /* [CP] Embed Pods Frameworks */,
 				411BE14326F4AB1A00D8168F /* Copy Frameworks */,
+				C0EED91AD01A906A1D78426F /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -428,7 +428,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		35F5E686F1D353E987A5FF5D /* [CP] Check Pods Manifest.lock */ = {
+		2D13E0596112BF325AB96308 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -450,7 +450,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		9726713CD071C71DEA39E184 /* [CP] Embed Pods Frameworks */ = {
+		C0EED91AD01A906A1D78426F /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -640,7 +640,7 @@
 		};
 		410EA70C26F49D170026A1A7 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E15056B771B9E58ECAAADFB2 /* Pods-GoliathCurrencyChanger.debug.xcconfig */;
+			baseConfigurationReference = 96B2617E6BB36D674CF16DD5 /* Pods-GoliathCurrencyChanger.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -660,7 +660,7 @@
 		};
 		410EA70D26F49D170026A1A7 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4E033ADC47E33AAE4A36A7D3 /* Pods-GoliathCurrencyChanger.release.xcconfig */;
+			baseConfigurationReference = 164AE905C42E1AE34C808A36 /* Pods-GoliathCurrencyChanger.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

@@ -17,17 +17,19 @@ protocol ProductDetailPresenterProtocol {
 class ProductDetailPresenter {
 
     let productDetailView: ProductDetailViewProtocol
-    let getProductAmountsUseCase: GetProductAmountsUseCaseProtocol
+    let getProductTransactionsUseCase: GetProductTransactionsUseCaseProtocol
+    let getTransactionTotalUseCase: GetTransactionTotalUseCaseProtocol
     var productCode: String!
     var initialConfigurationDone : Bool
     
-    init(productDetailView: ProductDetailViewProtocol, getProductAmountsUseCase: GetProductAmountsUseCaseProtocol) {
+    init(productDetailView: ProductDetailViewProtocol, getProductTransactionsUseCase: GetProductTransactionsUseCaseProtocol, getTransactionTotalUseCase: GetTransactionTotalUseCaseProtocol) {
         self.initialConfigurationDone = false
         self.productDetailView = productDetailView
-        self.getProductAmountsUseCase = getProductAmountsUseCase
+        self.getProductTransactionsUseCase = getProductTransactionsUseCase
+        self.getTransactionTotalUseCase = getTransactionTotalUseCase
     }
     
-    func manageAmountsResult(result: Result<[(Decimal, String)], GetProductError>) {
+    func manageTransactionsResult(result: Result<[(Decimal, String)], GetProductError>) {
         switch result {
         case .success(let transactionList):
             self.productDetailView.showTransactionList(transactions: transactionList.map { "\($0.0)" + " " + $0.1 })
@@ -45,9 +47,17 @@ extension ProductDetailPresenter: ProductDetailPresenterProtocol {
             self.initialConfigurationDone = true
             self.productDetailView.addProductCodeToTitle(productCode: self.productCode)
             self.productDetailView.setLoadingViewVisibility(visible: true)
-            self.getProductAmountsUseCase.execute(productCode: self.productCode) { result in
+            self.getProductTransactionsUseCase.execute(productCode: self.productCode) { result in
                 self.productDetailView.setLoadingViewVisibility(visible: false)
-                self.manageAmountsResult(result: result)
+                self.manageTransactionsResult(result: result)
+            }
+            self.getTransactionTotalUseCase.execute(finalCurrency: "EUR", productCode: self.productCode) { result in
+                switch result {
+                case .success(let transactionTotalValue):
+                    self.productDetailView.addTotalAmountForThisProduct(totalAmount: "\(transactionTotalValue)")
+                case .failure(let error):
+                    print("Error: " + error.localizedDescription)
+                }
             }
         }
     }

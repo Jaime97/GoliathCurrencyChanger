@@ -11,10 +11,11 @@
 		413B8BFD26F796FD005DF18A /* LoggerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413B8BFA26F796FC005DF18A /* LoggerProtocol.swift */; };
 		413B8BFE26F796FD005DF18A /* OSLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413B8BFC26F796FC005DF18A /* OSLogger.swift */; };
 		413B8C0226F79867005DF18A /* CommonDependencyManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413B8C0126F79867005DF18A /* CommonDependencyManager.swift */; };
-		7EAE784E4364DDD883F80AB6 /* Pods_Common.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A841A2D6A59300056DA57320 /* Pods_Common.framework */; };
+		DA073428FD07965F2DA869E9 /* Pods_Common.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17A270C77E163E444B378E19 /* Pods_Common.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		17A270C77E163E444B378E19 /* Pods_Common.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Common.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		413B8BC426F795CE005DF18A /* Common.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Common.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		413B8BC726F795CE005DF18A /* Common.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Common.h; sourceTree = "<group>"; };
 		413B8BC826F795CE005DF18A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -22,7 +23,6 @@
 		413B8BFC26F796FC005DF18A /* OSLogger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OSLogger.swift; sourceTree = "<group>"; };
 		413B8C0126F79867005DF18A /* CommonDependencyManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonDependencyManager.swift; sourceTree = "<group>"; };
 		7F0E9C4255E492FC5692B570 /* Pods-Common.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Common.debug.xcconfig"; path = "Target Support Files/Pods-Common/Pods-Common.debug.xcconfig"; sourceTree = "<group>"; };
-		A841A2D6A59300056DA57320 /* Pods_Common.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Common.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8F1AE8DCBD8CE298DFF5093 /* Pods-Common.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Common.release.xcconfig"; path = "Target Support Files/Pods-Common/Pods-Common.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -31,7 +31,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7EAE784E4364DDD883F80AB6 /* Pods_Common.framework in Frameworks */,
+				DA073428FD07965F2DA869E9 /* Pods_Common.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -105,7 +105,7 @@
 		E81BDACC9AF12852D0DCD3BA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				A841A2D6A59300056DA57320 /* Pods_Common.framework */,
+				17A270C77E163E444B378E19 /* Pods_Common.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
