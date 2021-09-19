@@ -15,6 +15,8 @@ protocol ProductDetailPresenterProtocol {
 }
 
 class ProductDetailPresenter {
+    
+    static let currencyToUseInSum = "EUR"
 
     let productDetailView: ProductDetailViewProtocol
     let getProductTransactionsUseCase: GetProductTransactionsUseCaseProtocol
@@ -41,7 +43,7 @@ class ProductDetailPresenter {
     func manageTransactionTotalResult(result: Result<Decimal, GetTransactionTotalError>) {
         switch result {
         case .success(let transactionTotalValue):
-            self.productDetailView.addTotalAmountForThisProduct(totalAmount: "\(transactionTotalValue)")
+            self.productDetailView.addTotalAmountForThisProduct(totalAmount: "\(transactionTotalValue) " + ProductDetailPresenter.currencyToUseInSum)
         case .failure(let error):
             print("Error: " + error.localizedDescription)
         }
@@ -61,7 +63,7 @@ extension ProductDetailPresenter: ProductDetailPresenterProtocol {
                 self.productDetailView.setLoadingViewVisibility(visible: false)
                 self.manageTransactionsResult(result: result)
             }
-            self.getTransactionTotalUseCase.execute(finalCurrency: "EUR", productCode: self.productCode) { result in
+            self.getTransactionTotalUseCase.execute(finalCurrency: ProductDetailPresenter.currencyToUseInSum, productCode: self.productCode) { result in
                 self.productDetailView.setTotalAmountActivityIndicatorVisibility(visible: false)
                 self.manageTransactionTotalResult(result: result)
             }
