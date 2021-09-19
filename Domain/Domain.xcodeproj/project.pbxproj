@@ -14,6 +14,7 @@
 		413B8BF626F796EC005DF18A /* Common.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 413B8BE026F79697005DF18A /* Common.framework */; };
 		413B8BF726F796EC005DF18A /* Common.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 413B8BE026F79697005DF18A /* Common.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		413B8C2626F7A5E1005DF18A /* GetProductTransactionsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413B8C2526F7A5E1005DF18A /* GetProductTransactionsUseCase.swift */; };
+		413B8CCC26F7F473005DF18A /* Decimal+Round.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413B8CCB26F7F473005DF18A /* Decimal+Round.swift */; };
 		413DD31526F640EF00BD30B7 /* CurrencyConversion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413DD31426F640EF00BD30B7 /* CurrencyConversion.swift */; };
 		413DD31926F64EB100BD30B7 /* GetTransactionTotalUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413DD31826F64EB100BD30B7 /* GetTransactionTotalUseCase.swift */; };
 		413DD31C26F64F8D00BD30B7 /* CurrencyConversor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413DD31B26F64F8D00BD30B7 /* CurrencyConversor.swift */; };
@@ -66,6 +67,7 @@
 		411BE25326F52BD700D8168F /* GetProductListUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetProductListUseCase.swift; sourceTree = "<group>"; };
 		413B8BDB26F79697005DF18A /* Common.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Common.xcodeproj; path = ../../Common/Common.xcodeproj; sourceTree = "<group>"; };
 		413B8C2526F7A5E1005DF18A /* GetProductTransactionsUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetProductTransactionsUseCase.swift; sourceTree = "<group>"; };
+		413B8CCB26F7F473005DF18A /* Decimal+Round.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Decimal+Round.swift"; sourceTree = "<group>"; };
 		413DD31426F640EF00BD30B7 /* CurrencyConversion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyConversion.swift; sourceTree = "<group>"; };
 		413DD31826F64EB100BD30B7 /* GetTransactionTotalUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetTransactionTotalUseCase.swift; sourceTree = "<group>"; };
 		413DD31B26F64F8D00BD30B7 /* CurrencyConversor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyConversor.swift; sourceTree = "<group>"; };
@@ -132,6 +134,7 @@
 				411BE12926F4A82500D8168F /* Domain.h */,
 				411BE12A26F4A82500D8168F /* Info.plist */,
 				413DD31B26F64F8D00BD30B7 /* CurrencyConversor.swift */,
+				413B8CCB26F7F473005DF18A /* Decimal+Round.swift */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
@@ -397,6 +400,7 @@
 				411BE25426F52BD700D8168F /* GetProductListUseCase.swift in Sources */,
 				413DD31926F64EB100BD30B7 /* GetTransactionTotalUseCase.swift in Sources */,
 				413EB02E26F5F88C00227D51 /* ProductListRepositoryProtocol.swift in Sources */,
+				413B8CCC26F7F473005DF18A /* Decimal+Round.swift in Sources */,
 				411BE1F626F4FED700D8168F /* DomainDependencyManager.swift in Sources */,
 				413DD31526F640EF00BD30B7 /* CurrencyConversion.swift in Sources */,
 				413EB02026F5F4D000227D51 /* Product.swift in Sources */,

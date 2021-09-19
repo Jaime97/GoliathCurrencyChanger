@@ -42,7 +42,7 @@ class GetTransactionTotalUseCase: GetTransactionTotalUseCaseProtocol {
                             self.currencyConversor.calculateAllRates(currencyConversions: currencyConversionList)
                             
                             self.convertAndSumTransactions(finalCurrency: finalCurrency, product: product){ result in
-                                self.executeCompletion(result: .success(result), completion: completion)
+                                self.executeCompletion(result: .success(result.rounded(2, .bankers)), completion: completion)
                             } onError: {
                                 self.logger.logError(event: "Unknown currency for converter.", isPrivate: false)
                                 self.executeCompletion(result: .failure(.unknownCurrency), completion: completion)
@@ -56,7 +56,7 @@ class GetTransactionTotalUseCase: GetTransactionTotalUseCaseProtocol {
                 } else {
 
                     self.convertAndSumTransactions(finalCurrency: finalCurrency, product: product){ result in
-                        self.executeCompletion(result: .success(result), completion: completion)
+                        self.executeCompletion(result: .success(result.rounded(2, .bankers)), completion: completion)
                     } onError: {
                         self.executeCompletion(result: .failure(.unknownCurrency), completion: completion)
                     }
