@@ -21,6 +21,9 @@ class ProductDetailViewController: UIViewController {
     
     @IBOutlet weak var loadingTranstactionsActivityIndicator: UIActivityIndicatorView!
     
+    @IBOutlet weak var TotalAmountActivityIndicator: UIActivityIndicatorView!
+    
+    
     var presenter: ProductDetailPresenterProtocol!
 
     var transactionList:[String] = [String]()
@@ -69,5 +72,10 @@ extension ProductDetailViewController: ProductDetailViewProtocol {
     func setLoadingViewVisibility(visible:Bool) {
         visible ? (self.loadingTransactionsView.alpha = 1) : (self.loadingTransactionsView.alpha = 0)
         visible ? self.loadingTranstactionsActivityIndicator.startAnimating() : self.loadingTranstactionsActivityIndicator.stopAnimating()
+    }
+    
+    func setTotalAmountActivityIndicatorVisibility(visible:Bool) {
+        visible ? (self.TotalAmountActivityIndicator.alpha = 1) : (self.TotalAmountActivityIndicator.alpha = 0)
+        visible ? self.TotalAmountActivityIndicator.startAnimating() : self.TotalAmountActivityIndicator.stopAnimating()
     }
 }

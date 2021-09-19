@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
@@ -11,6 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ProductDetailViewController" customModule="Presentation" customModuleProvider="target">
             <connections>
+                <outlet property="TotalAmountActivityIndicator" destination="YN4-LZ-raq" id="4Uc-oe-Xrm"/>
                 <outlet property="loadingTransactionsView" destination="ZL1-X1-xlo" id="MTH-Rb-VIY"/>
                 <outlet property="loadingTranstactionsActivityIndicator" destination="hbo-mC-ArR" id="DGz-r2-NrM"/>
                 <outlet property="productCodeLabel" destination="ter-nc-Lrs" id="jvh-uW-xWh"/>
@@ -24,20 +25,20 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Code" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ter-nc-Lrs">
-                    <rect key="frame" x="153.5" y="69.5" width="68" height="33"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ter-nc-Lrs">
+                    <rect key="frame" x="153.66666666666666" y="86" width="0.0" height="0.0"/>
                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="28"/>
                     <color key="textColor" name="AccentColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Product: " lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uVU-1I-528">
-                    <rect key="frame" x="30" y="69" width="121.5" height="33.5"/>
+                    <rect key="frame" x="30.000000000000007" y="69" width="121.66666666666669" height="33.666666666666657"/>
                     <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="28"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="35Z-fP-Ocr" userLabel="Transaction Table View">
-                    <rect key="frame" x="20" y="122.5" width="374" height="589.5"/>
+                    <rect key="frame" x="20" y="112.66666666666669" width="374" height="599.33333333333326"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                 </tableView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KiN-A7-9no" userLabel="Separator">
@@ -48,25 +49,25 @@
                     </constraints>
                 </view>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total amount: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1hG-If-a5D">
-                    <rect key="frame" x="30" y="767" width="168" height="34"/>
-                    <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                    <rect key="frame" x="30" y="767" width="133.33333333333334" height="26.333333333333371"/>
+                    <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Amount" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qd2-eR-xWO">
-                    <rect key="frame" x="200" y="767" width="95.5" height="34"/>
-                    <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="19200.19 EUR" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qd2-eR-xWO" userLabel="Total Amount">
+                    <rect key="frame" x="165.33333333333334" y="767" width="136.00000000000003" height="26.333333333333371"/>
+                    <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
                     <color key="textColor" name="AccentColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <view alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZL1-X1-xlo" userLabel="Loading Transtactions View">
                     <rect key="frame" x="30" y="378" width="354" height="140"/>
                     <subviews>
-                        <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="hbo-mC-ArR">
-                            <rect key="frame" x="158.5" y="51.5" width="37" height="37"/>
+                        <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="hbo-mC-ArR" userLabel="Loading Transactions Activity Indicator">
+                            <rect key="frame" x="158.66666666666666" y="51.666666666666686" width="37" height="37"/>
                         </activityIndicatorView>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading transactions..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xil-Ka-8xT">
-                            <rect key="frame" x="0.0" y="95.5" width="354" height="21"/>
+                            <rect key="frame" x="0.0" y="95.666666666666686" width="354" height="21"/>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
@@ -82,6 +83,9 @@
                         <constraint firstItem="hbo-mC-ArR" firstAttribute="centerX" secondItem="ZL1-X1-xlo" secondAttribute="centerX" id="on7-xb-SrP"/>
                     </constraints>
                 </view>
+                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="YN4-LZ-raq" userLabel="Total Amount Activity Indicator">
+                    <rect key="frame" x="203.33333333333334" y="770.33333333333337" width="20" height="20"/>
+                </activityIndicatorView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -95,12 +99,14 @@
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="35Z-fP-Ocr" secondAttribute="bottom" constant="150" id="HhT-JD-3bc"/>
                 <constraint firstItem="uVU-1I-528" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="30" id="IeM-KV-Swq"/>
                 <constraint firstItem="uVU-1I-528" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="25" id="M22-od-Uue"/>
+                <constraint firstItem="YN4-LZ-raq" firstAttribute="centerY" secondItem="1hG-If-a5D" secondAttribute="centerY" id="OgZ-1T-gLc"/>
                 <constraint firstItem="ter-nc-Lrs" firstAttribute="centerY" secondItem="uVU-1I-528" secondAttribute="centerY" id="S6Q-XR-kED"/>
                 <constraint firstItem="Qd2-eR-xWO" firstAttribute="centerY" secondItem="1hG-If-a5D" secondAttribute="centerY" id="Uiz-pn-Tee"/>
                 <constraint firstItem="1hG-If-a5D" firstAttribute="top" secondItem="KiN-A7-9no" secondAttribute="bottom" constant="25" id="d7h-Vg-P9q"/>
-                <constraint firstItem="35Z-fP-Ocr" firstAttribute="top" secondItem="ter-nc-Lrs" secondAttribute="bottom" constant="20" id="efN-55-57q"/>
+                <constraint firstItem="35Z-fP-Ocr" firstAttribute="top" secondItem="uVU-1I-528" secondAttribute="bottom" constant="10" id="dk5-ri-Mxw"/>
                 <constraint firstItem="ZL1-X1-xlo" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="esc-oV-Amz"/>
                 <constraint firstItem="ZL1-X1-xlo" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="30" id="fRj-VM-3Vr"/>
+                <constraint firstItem="YN4-LZ-raq" firstAttribute="leading" secondItem="1hG-If-a5D" secondAttribute="trailing" constant="40" id="hQH-0s-XdL"/>
                 <constraint firstItem="KiN-A7-9no" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="hsZ-OF-kbD"/>
                 <constraint firstItem="Qd2-eR-xWO" firstAttribute="leading" secondItem="1hG-If-a5D" secondAttribute="trailing" constant="2" id="k1I-Q9-ZkI"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="KiN-A7-9no" secondAttribute="bottom" constant="120" id="naw-Ah-FVp"/>

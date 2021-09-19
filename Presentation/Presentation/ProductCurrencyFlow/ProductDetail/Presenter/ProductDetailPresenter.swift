@@ -38,6 +38,15 @@ class ProductDetailPresenter {
         }
     }
     
+    func manageTransactionTotalResult(result: Result<Decimal, GetTransactionTotalError>) {
+        switch result {
+        case .success(let transactionTotalValue):
+            self.productDetailView.addTotalAmountForThisProduct(totalAmount: "\(transactionTotalValue)")
+        case .failure(let error):
+            print("Error: " + error.localizedDescription)
+        }
+    }
+    
 }
 
 extension ProductDetailPresenter: ProductDetailPresenterProtocol {
@@ -45,6 +54,7 @@ extension ProductDetailPresenter: ProductDetailPresenterProtocol {
     func onViewShowed() {
         if(!self.initialConfigurationDone) {
             self.initialConfigurationDone = true
+            self.productDetailView.setTotalAmountActivityIndicatorVisibility(visible: true)
             self.productDetailView.addProductCodeToTitle(productCode: self.productCode)
             self.productDetailView.setLoadingViewVisibility(visible: true)
             self.getProductTransactionsUseCase.execute(productCode: self.productCode) { result in
@@ -52,12 +62,8 @@ extension ProductDetailPresenter: ProductDetailPresenterProtocol {
                 self.manageTransactionsResult(result: result)
             }
             self.getTransactionTotalUseCase.execute(finalCurrency: "EUR", productCode: self.productCode) { result in
-                switch result {
-                case .success(let transactionTotalValue):
-                    self.productDetailView.addTotalAmountForThisProduct(totalAmount: "\(transactionTotalValue)")
-                case .failure(let error):
-                    print("Error: " + error.localizedDescription)
-                }
+                self.productDetailView.setTotalAmountActivityIndicatorVisibility(visible: false)
+                self.manageTransactionTotalResult(result: result)
             }
         }
     }
