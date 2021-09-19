@@ -44,7 +44,9 @@ extension ProductDetailPresenter: ProductDetailPresenterProtocol {
         if(!self.initialConfigurationDone) {
             self.initialConfigurationDone = true
             self.productDetailView.addProductCodeToTitle(productCode: self.productCode)
+            self.productDetailView.setLoadingViewVisibility(visible: true)
             self.getProductAmountsUseCase.execute(productCode: self.productCode) { result in
+                self.productDetailView.setLoadingViewVisibility(visible: false)
                 self.manageAmountsResult(result: result)
             }
         }

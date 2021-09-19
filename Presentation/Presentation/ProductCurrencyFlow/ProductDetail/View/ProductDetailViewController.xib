@@ -11,6 +11,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ProductDetailViewController" customModule="Presentation" customModuleProvider="target">
             <connections>
+                <outlet property="loadingTransactionsView" destination="ZL1-X1-xlo" id="MTH-Rb-VIY"/>
+                <outlet property="loadingTranstactionsActivityIndicator" destination="hbo-mC-ArR" id="DGz-r2-NrM"/>
                 <outlet property="productCodeLabel" destination="ter-nc-Lrs" id="jvh-uW-xWh"/>
                 <outlet property="totalAmountLabel" destination="Qd2-eR-xWO" id="u8Y-ER-Aie"/>
                 <outlet property="transactionTableView" destination="35Z-fP-Ocr" id="mdw-wG-ILD"/>
@@ -57,6 +59,29 @@
                     <color key="textColor" name="AccentColor"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <view alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZL1-X1-xlo" userLabel="Loading Transtactions View">
+                    <rect key="frame" x="30" y="378" width="354" height="140"/>
+                    <subviews>
+                        <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="hbo-mC-ArR">
+                            <rect key="frame" x="158.5" y="51.5" width="37" height="37"/>
+                        </activityIndicatorView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading transactions..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xil-Ka-8xT">
+                            <rect key="frame" x="0.0" y="95.5" width="354" height="21"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="xil-Ka-8xT" firstAttribute="top" secondItem="hbo-mC-ArR" secondAttribute="bottom" constant="7" id="N0j-qY-UoM"/>
+                        <constraint firstAttribute="trailing" secondItem="xil-Ka-8xT" secondAttribute="trailing" id="TTI-xW-bzk"/>
+                        <constraint firstItem="hbo-mC-ArR" firstAttribute="centerY" secondItem="ZL1-X1-xlo" secondAttribute="centerY" id="Uk7-uR-WZV"/>
+                        <constraint firstAttribute="height" constant="140" id="ksQ-lO-lFM"/>
+                        <constraint firstItem="xil-Ka-8xT" firstAttribute="leading" secondItem="ZL1-X1-xlo" secondAttribute="leading" id="mkH-9G-1gB"/>
+                        <constraint firstItem="hbo-mC-ArR" firstAttribute="centerX" secondItem="ZL1-X1-xlo" secondAttribute="centerX" id="on7-xb-SrP"/>
+                    </constraints>
+                </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -66,6 +91,7 @@
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="35Z-fP-Ocr" secondAttribute="trailing" constant="20" id="8GK-Sp-Ski"/>
                 <constraint firstItem="1hG-If-a5D" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="30" id="9YC-Ge-HfO"/>
                 <constraint firstItem="ter-nc-Lrs" firstAttribute="leading" secondItem="uVU-1I-528" secondAttribute="trailing" constant="2" id="Boo-w7-zKU"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="ZL1-X1-xlo" secondAttribute="trailing" constant="30" id="EtF-Ty-Q79"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="35Z-fP-Ocr" secondAttribute="bottom" constant="150" id="HhT-JD-3bc"/>
                 <constraint firstItem="uVU-1I-528" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="30" id="IeM-KV-Swq"/>
                 <constraint firstItem="uVU-1I-528" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="25" id="M22-od-Uue"/>
@@ -73,6 +99,8 @@
                 <constraint firstItem="Qd2-eR-xWO" firstAttribute="centerY" secondItem="1hG-If-a5D" secondAttribute="centerY" id="Uiz-pn-Tee"/>
                 <constraint firstItem="1hG-If-a5D" firstAttribute="top" secondItem="KiN-A7-9no" secondAttribute="bottom" constant="25" id="d7h-Vg-P9q"/>
                 <constraint firstItem="35Z-fP-Ocr" firstAttribute="top" secondItem="ter-nc-Lrs" secondAttribute="bottom" constant="20" id="efN-55-57q"/>
+                <constraint firstItem="ZL1-X1-xlo" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="esc-oV-Amz"/>
+                <constraint firstItem="ZL1-X1-xlo" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="30" id="fRj-VM-3Vr"/>
                 <constraint firstItem="KiN-A7-9no" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="hsZ-OF-kbD"/>
                 <constraint firstItem="Qd2-eR-xWO" firstAttribute="leading" secondItem="1hG-If-a5D" secondAttribute="trailing" constant="2" id="k1I-Q9-ZkI"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="KiN-A7-9no" secondAttribute="bottom" constant="120" id="naw-Ah-FVp"/>
