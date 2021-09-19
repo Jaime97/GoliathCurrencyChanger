@@ -69,7 +69,7 @@ class ProductListPresenter {
     }
     
     func onGetProductListError(error:Error) {
-        self.productListView.showAlert(title: NSLocalizedString("error", comment: ""), message: NSLocalizedString("product_list_error", comment: ""), buttonTitle: NSLocalizedString("ok", comment: ""))
+        self.productListView.showAlert(title: NSLocalizedString("error", bundle:Bundle(for: ProductListPresenter.self), comment: ""), message: NSLocalizedString("product_list_error", bundle:Bundle(for: ProductListPresenter.self), comment: ""), buttonTitle: NSLocalizedString("ok", bundle:Bundle(for: ProductListPresenter.self), comment: ""))
     }
 }
 
@@ -79,7 +79,7 @@ extension ProductListPresenter: ProductListPresenterProtocol {
         if(!initialConfigurationDone) {
             self.initialConfigurationDone = true
             self.getProductList()
-            self.productListView.addRefreshToTable(refreshMessage: NSLocalizedString("pull_to_refresh", comment: ""))
+            self.productListView.addRefreshToTable(refreshMessage: NSLocalizedString("pull_to_refresh", bundle:Bundle(for: ProductListPresenter.self), comment: ""))
         }
     }
     
