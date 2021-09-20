@@ -28,10 +28,28 @@ extension ProductCurrencyCoordinator {
     
     func showFirstScreen() {
         let vc = self.container.resolve(ProductListViewProtocol.self)! as! ProductListViewController
+        vc.presenter.delegate = self
+        self.navigationController.pushViewController(vc, animated: true)
+    }
+    
+    func showSecondScreen(product:String) {
+        let vc = self.container.resolve(ProductDetailViewProtocol.self)! as! ProductDetailViewController
+        vc.presenter.productCode = product
+        vc.presenter.delegate = self
         self.navigationController.pushViewController(vc, animated: true)
     }
 }
 
 extension ProductCurrencyCoordinator: ProductSelectionDelegate {
     
+    func onProductSelected(product:String) {
+        self.showSecondScreen(product: product)
+    }
+}
+
+extension ProductCurrencyCoordinator: ProductErrorDelegate {
+    
+    func onErrorInDetail() {
+        self.navigationController.popViewController(animated: true)
+    }
 }

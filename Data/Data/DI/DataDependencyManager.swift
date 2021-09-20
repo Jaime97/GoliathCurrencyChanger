@@ -7,9 +7,26 @@
 
 import Foundation
 import Swinject
+import Domain
+import Common
 
 public class DataDependencyManager {
     public static func setup(container:Container) {
         
+        container.register(DataFormatter.self) { r in
+            DataFormatter()
+        }
+        
+        container.register(Networkable.self) { r in
+            NetworkManager()
+        }.inObjectScope(.container)
+        
+        container.register(MemoryStorageManagerProtocol.self) { r in
+            MemoryStorageManager()
+        }.inObjectScope(.container)
+        
+        container.register(ProductRepositoryProtocol.self) { r in
+            ProductRepository(networkManager: r.resolve(Networkable.self)!, memoryStorageManager: r.resolve(MemoryStorageManagerProtocol.self)!, logger: r.resolve(LoggerProtocol.self, name: LogCategory.data.rawValue)!, dataFormatter: r.resolve(DataFormatter.self)!)
+        }
     }
 }

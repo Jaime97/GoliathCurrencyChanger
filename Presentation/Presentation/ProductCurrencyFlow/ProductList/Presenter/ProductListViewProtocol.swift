@@ -8,6 +8,13 @@
 import Foundation
 
 protocol ProductListViewProtocol {
-
+    
+    func showProductList(products:[String])
+    func showEmptyListMessage()
+    func setLoadingViewVisibility(visible:Bool)
+    func setProductListVisibility(visible:Bool)
+    func showAlert(title:String, message:String, buttonTitle:String, handler: (() -> ())?)
+    func addRefreshToTable(refreshMessage:String)
+    func endRefreshing()
     
 }

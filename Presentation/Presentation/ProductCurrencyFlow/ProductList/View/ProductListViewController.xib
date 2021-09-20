@@ -10,6 +10,10 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ProductListViewController" customModule="Presentation" customModuleProvider="target">
             <connections>
+                <outlet property="loadingProductsActivityIndicator" destination="a40-Hp-haK" id="AVG-Gf-lLo"/>
+                <outlet property="loadingProductsView" destination="fNg-FW-IEx" id="rYr-Hp-GUc"/>
+                <outlet property="noProductMessage" destination="0Sj-4n-6nJ" id="P6s-dz-LhA"/>
+                <outlet property="productTableView" destination="ExU-Jd-Vbp" id="T4a-fO-j9p"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -17,9 +21,64 @@
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ExU-Jd-Vbp" userLabel="Product Table View">
+                    <rect key="frame" x="20" y="122.5" width="374" height="729.5"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </tableView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Current products" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hLx-R8-hJG">
+                    <rect key="frame" x="30" y="69" width="359" height="33.5"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="28"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No product available at this time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Sj-4n-6nJ">
+                    <rect key="frame" x="30" y="132.5" width="245" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fNg-FW-IEx" userLabel="Loading Products View">
+                    <rect key="frame" x="30" y="378" width="354" height="140"/>
+                    <subviews>
+                        <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="a40-Hp-haK">
+                            <rect key="frame" x="158.5" y="51.5" width="37" height="37"/>
+                        </activityIndicatorView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading products..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0JE-io-S5n">
+                            <rect key="frame" x="0.0" y="95.5" width="354" height="21"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="0JE-io-S5n" firstAttribute="top" secondItem="a40-Hp-haK" secondAttribute="bottom" constant="7" id="IM4-dy-chc"/>
+                        <constraint firstItem="a40-Hp-haK" firstAttribute="centerY" secondItem="fNg-FW-IEx" secondAttribute="centerY" id="JNj-JF-uE6"/>
+                        <constraint firstItem="0JE-io-S5n" firstAttribute="leading" secondItem="fNg-FW-IEx" secondAttribute="leading" id="K1J-VD-05m"/>
+                        <constraint firstAttribute="height" constant="140" id="Kdr-6y-f2e"/>
+                        <constraint firstItem="a40-Hp-haK" firstAttribute="centerX" secondItem="fNg-FW-IEx" secondAttribute="centerX" id="ML6-XU-aH3"/>
+                        <constraint firstAttribute="trailing" secondItem="0JE-io-S5n" secondAttribute="trailing" id="iBe-GD-wlc"/>
+                    </constraints>
+                </view>
+            </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-            <point key="canvasLocation" x="141" y="131"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="ExU-Jd-Vbp" secondAttribute="trailing" constant="20" id="0Nu-c0-eS3"/>
+                <constraint firstItem="0Sj-4n-6nJ" firstAttribute="leading" secondItem="hLx-R8-hJG" secondAttribute="leading" id="0k7-sU-3ii"/>
+                <constraint firstItem="0Sj-4n-6nJ" firstAttribute="top" secondItem="hLx-R8-hJG" secondAttribute="bottom" constant="30" id="16r-70-seb"/>
+                <constraint firstItem="hLx-R8-hJG" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="25" id="74n-Xu-r0d"/>
+                <constraint firstItem="ExU-Jd-Vbp" firstAttribute="top" secondItem="hLx-R8-hJG" secondAttribute="bottom" constant="20" id="8ou-sb-19m"/>
+                <constraint firstItem="hLx-R8-hJG" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="30" id="D9V-QZ-4Rv"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="hLx-R8-hJG" secondAttribute="trailing" constant="25" id="VIe-OU-A80"/>
+                <constraint firstItem="fNg-FW-IEx" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="VmK-Or-wMj"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="ExU-Jd-Vbp" secondAttribute="bottom" constant="10" id="azR-vO-ynL"/>
+                <constraint firstItem="ExU-Jd-Vbp" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="b3p-Ne-Fq7"/>
+                <constraint firstItem="fNg-FW-IEx" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="30" id="ed0-6L-0Dm"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="fNg-FW-IEx" secondAttribute="trailing" constant="30" id="hXp-d6-IeE"/>
+            </constraints>
+            <point key="canvasLocation" x="140.57971014492756" y="130.58035714285714"/>
         </view>
     </objects>
     <resources>
