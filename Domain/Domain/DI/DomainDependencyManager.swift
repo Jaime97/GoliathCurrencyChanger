@@ -13,7 +13,7 @@ public class DomainDependencyManager {
     public static func setup(container:Container) {
         container.register(CurrencyConversor.self) { r in
             CurrencyConversor()
-        }
+        }.inObjectScope(.container)
         
         container.register(GetProductListUseCaseProtocol.self) { r in
             GetProductListUseCase(productRepository: r.resolve(ProductRepositoryProtocol.self)!)
