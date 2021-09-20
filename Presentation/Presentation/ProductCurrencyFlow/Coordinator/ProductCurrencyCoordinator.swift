@@ -35,6 +35,7 @@ extension ProductCurrencyCoordinator {
     func showSecondScreen(product:String) {
         let vc = self.container.resolve(ProductDetailViewProtocol.self)! as! ProductDetailViewController
         vc.presenter.productCode = product
+        vc.presenter.delegate = self
         self.navigationController.pushViewController(vc, animated: true)
     }
 }

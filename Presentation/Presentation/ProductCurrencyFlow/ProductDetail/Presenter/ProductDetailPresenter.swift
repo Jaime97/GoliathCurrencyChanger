@@ -42,7 +42,12 @@ class ProductDetailPresenter {
         switch result {
         case .success(let transactionList):
             self.productDetailView.showTransactionList(transactions: transactionList.map { "\($0.0)" + " " + $0.1 })
+            self.getTransactionTotalUseCase.execute(finalCurrency: ProductDetailPresenter.currencyToUseInSum, productCode: self.productCode) { result in
+                self.productDetailView.setTotalAmountActivityIndicatorVisibility(visible: false)
+                self.manageTransactionTotalResult(result: result)
+            }
         case .failure( _):
+            self.productDetailView.setTotalAmountActivityIndicatorVisibility(visible: false)
             self.productDetailView.showAlert(title: NSLocalizedString("error", bundle:Bundle(for: ProductDetailPresenter.self), comment: ""), message: NSLocalizedString("product_not_found", bundle:Bundle(for: ProductDetailPresenter.self), comment: ""), buttonTitle: NSLocalizedString("ok", bundle:Bundle(for: ProductDetailPresenter.self), comment: "")) {
                 self.delegate?.onErrorInDetail()
             }
@@ -78,10 +83,6 @@ extension ProductDetailPresenter: ProductDetailPresenterProtocol {
             self.getProductTransactionsUseCase.execute(productCode: self.productCode) { result in
                 self.productDetailView.setLoadingViewVisibility(visible: false)
                 self.manageTransactionsResult(result: result)
-            }
-            self.getTransactionTotalUseCase.execute(finalCurrency: ProductDetailPresenter.currencyToUseInSum, productCode: self.productCode) { result in
-                self.productDetailView.setTotalAmountActivityIndicatorVisibility(visible: false)
-                self.manageTransactionTotalResult(result: result)
             }
         }
     }
