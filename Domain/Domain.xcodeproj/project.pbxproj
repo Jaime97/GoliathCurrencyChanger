@@ -15,6 +15,7 @@
 		4134C0DB26F88DAD00951569 /* MockCurrencyConversor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4134C0DA26F88DAD00951569 /* MockCurrencyConversor.swift */; };
 		4134C0DF26F88EE500951569 /* MockProductRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4134C0DE26F88EE500951569 /* MockProductRepository.swift */; };
 		4134C0E326F89D4E00951569 /* GetProductListUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4134C0E226F89D4E00951569 /* GetProductListUseCaseTests.swift */; };
+		4134C0E626F8A0B800951569 /* GetProductTransationsUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4134C0E526F8A0B800951569 /* GetProductTransationsUseCaseTests.swift */; };
 		413B8BF626F796EC005DF18A /* Common.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 413B8BE026F79697005DF18A /* Common.framework */; };
 		413B8BF726F796EC005DF18A /* Common.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 413B8BE026F79697005DF18A /* Common.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		413B8C2626F7A5E1005DF18A /* GetProductTransactionsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413B8C2526F7A5E1005DF18A /* GetProductTransactionsUseCase.swift */; };
@@ -73,6 +74,7 @@
 		4134C0DA26F88DAD00951569 /* MockCurrencyConversor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockCurrencyConversor.swift; sourceTree = "<group>"; };
 		4134C0DE26F88EE500951569 /* MockProductRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockProductRepository.swift; sourceTree = "<group>"; };
 		4134C0E226F89D4E00951569 /* GetProductListUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetProductListUseCaseTests.swift; sourceTree = "<group>"; };
+		4134C0E526F8A0B800951569 /* GetProductTransationsUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetProductTransationsUseCaseTests.swift; sourceTree = "<group>"; };
 		413B8BDB26F79697005DF18A /* Common.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Common.xcodeproj; path = ../../Common/Common.xcodeproj; sourceTree = "<group>"; };
 		413B8C2526F7A5E1005DF18A /* GetProductTransactionsUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetProductTransactionsUseCase.swift; sourceTree = "<group>"; };
 		413B8CCB26F7F473005DF18A /* Decimal+Round.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Decimal+Round.swift"; sourceTree = "<group>"; };
@@ -223,6 +225,7 @@
 				413FA88526F7838F008ECD1D /* CurrencyConversorTests.swift */,
 				4134C0C926F88A9800951569 /* GetTransactionTotalUseCaseTests.swift */,
 				4134C0E226F89D4E00951569 /* GetProductListUseCaseTests.swift */,
+				4134C0E526F8A0B800951569 /* GetProductTransationsUseCaseTests.swift */,
 			);
 			path = DomainTests;
 			sourceTree = "<group>";
@@ -458,6 +461,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4134C0CA26F88A9800951569 /* GetTransactionTotalUseCaseTests.swift in Sources */,
+				4134C0E626F8A0B800951569 /* GetProductTransationsUseCaseTests.swift in Sources */,
 				4134C0E326F89D4E00951569 /* GetProductListUseCaseTests.swift in Sources */,
 				4134C0DF26F88EE500951569 /* MockProductRepository.swift in Sources */,
 				413FA88626F7838F008ECD1D /* CurrencyConversorTests.swift in Sources */,
