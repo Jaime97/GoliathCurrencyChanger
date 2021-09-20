@@ -20,6 +20,8 @@ class MockProductRepository {
     
     var failGettingProduct = false
     
+    var failGettingProductList = false
+    
     var error:Error?
     
 }
@@ -27,7 +29,7 @@ class MockProductRepository {
 extension MockProductRepository: ProductRepositoryProtocol {
     
     func getProductList(completion: @escaping (Result<[Product], Error>) -> ()) {
-        completion(.success(self.productList ?? [Product]()))
+        self.failGettingProductList ? completion(.failure(self.error!)) : completion(.success(self.productList ?? [Product]()))
     }
     
     func findProductInProductList(productCode:String) -> Product? {
