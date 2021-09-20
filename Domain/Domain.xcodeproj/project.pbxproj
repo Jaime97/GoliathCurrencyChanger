@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -11,6 +11,7 @@
 		411BE12B26F4A82500D8168F /* Domain.h in Headers */ = {isa = PBXBuildFile; fileRef = 411BE12926F4A82500D8168F /* Domain.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		411BE1F626F4FED700D8168F /* DomainDependencyManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 411BE1F526F4FED700D8168F /* DomainDependencyManager.swift */; };
 		411BE25426F52BD700D8168F /* GetProductListUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 411BE25326F52BD700D8168F /* GetProductListUseCase.swift */; };
+		4134C0CA26F88A9800951569 /* GetTransactionTotalUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4134C0C926F88A9800951569 /* GetTransactionTotalUseCaseTests.swift */; };
 		413B8BF626F796EC005DF18A /* Common.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 413B8BE026F79697005DF18A /* Common.framework */; };
 		413B8BF726F796EC005DF18A /* Common.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 413B8BE026F79697005DF18A /* Common.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		413B8C2626F7A5E1005DF18A /* GetProductTransactionsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413B8C2526F7A5E1005DF18A /* GetProductTransactionsUseCase.swift */; };
@@ -65,6 +66,7 @@
 		411BE12A26F4A82500D8168F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		411BE1F526F4FED700D8168F /* DomainDependencyManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DomainDependencyManager.swift; sourceTree = "<group>"; };
 		411BE25326F52BD700D8168F /* GetProductListUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetProductListUseCase.swift; sourceTree = "<group>"; };
+		4134C0C926F88A9800951569 /* GetTransactionTotalUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetTransactionTotalUseCaseTests.swift; sourceTree = "<group>"; };
 		413B8BDB26F79697005DF18A /* Common.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Common.xcodeproj; path = ../../Common/Common.xcodeproj; sourceTree = "<group>"; };
 		413B8C2526F7A5E1005DF18A /* GetProductTransactionsUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetProductTransactionsUseCase.swift; sourceTree = "<group>"; };
 		413B8CCB26F7F473005DF18A /* Decimal+Round.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Decimal+Round.swift"; sourceTree = "<group>"; };
@@ -203,6 +205,7 @@
 			children = (
 				413FA87C26F78374008ECD1D /* Info.plist */,
 				413FA88526F7838F008ECD1D /* CurrencyConversorTests.swift */,
+				4134C0C926F88A9800951569 /* GetTransactionTotalUseCaseTests.swift */,
 			);
 			path = DomainTests;
 			sourceTree = "<group>";
@@ -270,6 +273,7 @@
 				413FA87426F78374008ECD1D /* Sources */,
 				413FA87526F78374008ECD1D /* Frameworks */,
 				413FA87626F78374008ECD1D /* Resources */,
+				C005BCA74E52859D8D6C44B6 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -396,6 +400,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		C005BCA74E52859D8D6C44B6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DomainTests/Pods-DomainTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DomainTests/Pods-DomainTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DomainTests/Pods-DomainTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -419,6 +440,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4134C0CA26F88A9800951569 /* GetTransactionTotalUseCaseTests.swift in Sources */,
 				413FA88626F7838F008ECD1D /* CurrencyConversorTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

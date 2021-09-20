@@ -69,7 +69,6 @@ class ProductDetailPresenter {
             }
         }
     }
-    
 }
 
 extension ProductDetailPresenter: ProductDetailPresenterProtocol {

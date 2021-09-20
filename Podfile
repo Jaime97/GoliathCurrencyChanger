@@ -38,7 +38,7 @@ target 'Domain' do
   
   target 'DomainTests' do
       inherit! :search_paths
-      domain_pods
+      shared_pods
     end
 end
 

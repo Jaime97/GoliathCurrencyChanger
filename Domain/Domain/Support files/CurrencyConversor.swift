@@ -11,6 +11,15 @@ public enum CurrencyConversorError: Error {
     case unknownCurrency(currency: String)
 }
 
+extension CurrencyConversorError: Equatable {
+    public static func ==(lhs: CurrencyConversorError, rhs: CurrencyConversorError) -> Bool {
+        switch (lhs, rhs) {
+            case (.unknownCurrency, .unknownCurrency):
+                return true
+        }
+    }
+}
+
 class CurrencyConversor {
     
     var currencies:[String]
