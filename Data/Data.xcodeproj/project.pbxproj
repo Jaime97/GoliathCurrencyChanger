@@ -15,6 +15,7 @@
 		41375A0D26F5E8350087C8E9 /* NetworkProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41375A0C26F5E8350087C8E9 /* NetworkProduct.swift */; };
 		413B8BEF26F796D9005DF18A /* Common.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 413B8BED26F796B5005DF18A /* Common.framework */; };
 		413B8BF026F796D9005DF18A /* Common.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 413B8BED26F796B5005DF18A /* Common.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		413B8CE126F80945005DF18A /* DataFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413B8CE026F80945005DF18A /* DataFormatter.swift */; };
 		413DD30C26F637BC00BD30B7 /* MemoryStorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413DD30B26F637BC00BD30B7 /* MemoryStorageManager.swift */; };
 		413DD30F26F6382D00BD30B7 /* DataProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413DD30E26F6382D00BD30B7 /* DataProduct.swift */; };
 		413DD31126F63B4C00BD30B7 /* String+Decimal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413DD31026F63B4C00BD30B7 /* String+Decimal.swift */; };
@@ -32,6 +33,13 @@
 			proxyType = 2;
 			remoteGlobalIDString = 413B8BC426F795CE005DF18A;
 			remoteInfo = Common;
+		};
+		413B8CDD26F808EC005DF18A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 413EB02326F5F5C100227D51 /* Domain.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 413FA87826F78374008ECD1D;
+			remoteInfo = DomainTests;
 		};
 		413EB02726F5F5C100227D51 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -67,6 +75,7 @@
 		41375A0426F5E4280087C8E9 /* ProductApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductApi.swift; sourceTree = "<group>"; };
 		41375A0C26F5E8350087C8E9 /* NetworkProduct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkProduct.swift; sourceTree = "<group>"; };
 		413B8BE826F796B5005DF18A /* Common.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Common.xcodeproj; path = ../../Common/Common.xcodeproj; sourceTree = "<group>"; };
+		413B8CE026F80945005DF18A /* DataFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataFormatter.swift; sourceTree = "<group>"; };
 		413DD30B26F637BC00BD30B7 /* MemoryStorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryStorageManager.swift; sourceTree = "<group>"; };
 		413DD30E26F6382D00BD30B7 /* DataProduct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataProduct.swift; sourceTree = "<group>"; };
 		413DD31026F63B4C00BD30B7 /* String+Decimal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Decimal.swift"; sourceTree = "<group>"; };
@@ -114,6 +123,7 @@
 		411BE15126F4B81300D8168F /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				413B8CDF26F808F2005DF18A /* Support files */,
 				413DD30D26F6381500BD30B7 /* Models */,
 				413DD30A26F637A300BD30B7 /* MemoryStorage */,
 				411BE22526F51AD300D8168F /* DI */,
@@ -121,8 +131,6 @@
 				411BE1BD26F4E32C00D8168F /* Network */,
 				411BE15226F4B81300D8168F /* Data.h */,
 				411BE15326F4B81300D8168F /* Info.plist */,
-				413EB01C26F5F31F00227D51 /* DataConstants.swift */,
-				413DD31026F63B4C00BD30B7 /* String+Decimal.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -170,6 +178,16 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		413B8CDF26F808F2005DF18A /* Support files */ = {
+			isa = PBXGroup;
+			children = (
+				413EB01C26F5F31F00227D51 /* DataConstants.swift */,
+				413DD31026F63B4C00BD30B7 /* String+Decimal.swift */,
+				413B8CE026F80945005DF18A /* DataFormatter.swift */,
+			);
+			path = "Support files";
+			sourceTree = "<group>";
+		};
 		413DD30A26F637A300BD30B7 /* MemoryStorage */ = {
 			isa = PBXGroup;
 			children = (
@@ -199,6 +217,7 @@
 			isa = PBXGroup;
 			children = (
 				413EB02826F5F5C100227D51 /* Domain.framework */,
+				413B8CDE26F808EC005DF18A /* DomainTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -305,6 +324,13 @@
 			remoteRef = 413B8BEC26F796B5005DF18A /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
+		413B8CDE26F808EC005DF18A /* DomainTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = DomainTests.xctest;
+			remoteRef = 413B8CDD26F808EC005DF18A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 		413EB02826F5F5C100227D51 /* Domain.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
@@ -362,6 +388,7 @@
 				413EB01926F5EA3900227D51 /* NetworkManager.swift in Sources */,
 				413DD31126F63B4C00BD30B7 /* String+Decimal.swift in Sources */,
 				41375A0D26F5E8350087C8E9 /* NetworkProduct.swift in Sources */,
+				413B8CE126F80945005DF18A /* DataFormatter.swift in Sources */,
 				41375A0226F5E3370087C8E9 /* ProductRepository.swift in Sources */,
 				413DD30F26F6382D00BD30B7 /* DataProduct.swift in Sources */,
 			);

@@ -14,25 +14,13 @@ class ProductRepository {
     private let networkManager: Networkable
     private let memoryStorageManager: MemoryStorageManagerProtocol
     private let logger: LoggerProtocol
+    private let dataFormatter: DataFormatter
     
-    init(networkManager: Networkable, memoryStorageManager: MemoryStorageManagerProtocol, logger: LoggerProtocol) {
+    init(networkManager: Networkable, memoryStorageManager: MemoryStorageManagerProtocol, logger: LoggerProtocol, dataFormatter: DataFormatter) {
         self.networkManager = networkManager
         self.memoryStorageManager = memoryStorageManager
         self.logger = logger
-    }
-    
-    func mapNetworkProductArrayToDataProductArray(networkProductList: [NetworkProduct]) -> [DataProduct] {
-        var productList = [DataProduct]()
-        for networkProduct in networkProductList {
-            if let product = productList.first(where: { $0.getSku() == networkProduct.sku}) {
-                product.addAmount(amount: networkProduct.amount.toDecimal()!, currency: networkProduct.currency)
-            } else {
-                let newProduct = DataProduct(sku: networkProduct.sku)
-                newProduct.addAmount(amount: networkProduct.amount.toDecimal()!, currency: networkProduct.currency)
-                productList.append(newProduct)
-            }
-        }
-        return productList
+        self.dataFormatter = dataFormatter
     }
 }
 
@@ -46,7 +34,7 @@ extension ProductRepository: ProductRepositoryProtocol {
         self.networkManager.fetchProducts { result in
             switch result {
             case .success(let productList):
-                let dataProductList = self.mapNetworkProductArrayToDataProductArray(networkProductList: productList)
+                let dataProductList = self.dataFormatter.mapNetworkProductArrayToDataProductArray(networkProductList: productList)
                 self.memoryStorageManager.saveProductList(productList: dataProductList)
                 completion(.success(dataProductList.map {
                     $0.toProduct()
@@ -71,19 +59,4 @@ extension ProductRepository: ProductRepositoryProtocol {
     }
 }
 
-extension NetworkCurrencyConversion {
-    
-    func toCurrencyConversion() -> CurrencyConversion {
-        return CurrencyConversion(currencyPair: (self.from, self.to), rate: self.rate.toDecimal()!)
-    }
-    
-}
-
-extension DataProduct {
-    
-    func toProduct() -> Product {
-        return Product(productCode: self.sku, amounts: self.amounts)
-    }
-    
-}
 
