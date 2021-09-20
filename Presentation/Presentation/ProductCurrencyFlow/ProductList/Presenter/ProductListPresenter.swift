@@ -69,7 +69,7 @@ class ProductListPresenter {
     }
     
     func onGetProductListError(error:Error) {
-        self.productListView.showAlert(title: NSLocalizedString("error", bundle:Bundle(for: ProductListPresenter.self), comment: ""), message: NSLocalizedString("product_list_error", bundle:Bundle(for: ProductListPresenter.self), comment: ""), buttonTitle: NSLocalizedString("ok", bundle:Bundle(for: ProductListPresenter.self), comment: ""))
+        self.productListView.showAlert(title: NSLocalizedString("error", bundle:Bundle(for: ProductListPresenter.self), comment: ""), message: NSLocalizedString("product_list_error", bundle:Bundle(for: ProductListPresenter.self), comment: ""), buttonTitle: NSLocalizedString("ok", bundle:Bundle(for: ProductListPresenter.self), comment: ""), handler: nil)
     }
 }
 

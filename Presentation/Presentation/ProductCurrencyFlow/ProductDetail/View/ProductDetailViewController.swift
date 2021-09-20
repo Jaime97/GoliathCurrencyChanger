@@ -7,6 +7,7 @@
 
 import UIKit
 
+
 class ProductDetailViewController: UIViewController {
     
     let CellIdentifier = "AmountTableViewCell"
@@ -80,7 +81,7 @@ extension ProductDetailViewController: ProductDetailViewProtocol {
         visible ? self.TotalAmountActivityIndicator.startAnimating() : self.TotalAmountActivityIndicator.stopAnimating()
     }
     
-    func showAlert(title:String, message:String, buttonTitle:String) {
-        self.alertManager.showAlert(title: title, message: message, buttonTitle: buttonTitle, viewController: self)
+    func showAlert(title:String, message:String, buttonTitle:String, handler: (() -> ())?) {
+        self.alertManager.showAlert(title: title, message: message, buttonTitle: buttonTitle, viewController: self, handler: handler)
     }
 }

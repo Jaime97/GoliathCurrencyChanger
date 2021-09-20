@@ -77,8 +77,8 @@ extension ProductListViewController: ProductListViewProtocol {
         visible ? (self.productTableView.alpha = 1) : (self.productTableView.alpha = 0)
     }
     
-    func showAlert(title:String, message:String, buttonTitle:String) {
-        self.alertManager.showAlert(title: title, message: message, buttonTitle: buttonTitle, viewController: self)
+    func showAlert(title:String, message:String, buttonTitle:String, handler: (() -> ())?) {
+        self.alertManager.showAlert(title: title, message: message, buttonTitle: buttonTitle, viewController: self, handler: handler)
     }
     
     func addRefreshToTable(refreshMessage:String) {

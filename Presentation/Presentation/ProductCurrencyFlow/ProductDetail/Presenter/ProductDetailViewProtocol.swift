@@ -14,6 +14,6 @@ protocol ProductDetailViewProtocol {
     func addTotalAmountForThisProduct(totalAmount: String)
     func setLoadingViewVisibility(visible:Bool)
     func setTotalAmountActivityIndicatorVisibility(visible:Bool)
-    func showAlert(title:String, message:String, buttonTitle:String
+    func showAlert(title:String, message:String, buttonTitle:String, handler: (() -> ())?)
     
 }

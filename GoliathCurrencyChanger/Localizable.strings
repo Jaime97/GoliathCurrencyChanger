@@ -9,4 +9,7 @@
 "error" = "Error";
 "product_list_error" = "There was an error getting the product list. Please, try again later.";
 "pull_to_refresh" = "Pull to refresh";
+"product_not_found" = "The selected product could not be found. Please try again later.";
+"conversion_download_error" = "The list of currency conversions could not be downloaded.";
+"unknown_amount" = "There was an error converting the amounts to the same amount one.";
 "ok" = "Ok";

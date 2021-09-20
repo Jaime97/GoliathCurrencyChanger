@@ -45,3 +45,10 @@ extension ProductCurrencyCoordinator: ProductSelectionDelegate {
         self.showSecondScreen(product: product)
     }
 }
+
+extension ProductCurrencyCoordinator: ProductErrorDelegate {
+    
+    func onErrorInDetail() {
+        self.navigationController.popViewController(animated: true)
+    }
+}

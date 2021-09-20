@@ -8,7 +8,12 @@
 import Foundation
 import Domain
 
+protocol ProductErrorDelegate: AnyObject {
+    func onErrorInDetail()
+}
+
 protocol ProductDetailPresenterProtocol {
+    var delegate: ProductErrorDelegate? { get set }
     var productCode: String! { get set }
     
     func onViewShowed()
@@ -17,6 +22,8 @@ protocol ProductDetailPresenterProtocol {
 class ProductDetailPresenter {
     
     static let currencyToUseInSum = "EUR"
+    
+    var delegate: ProductErrorDelegate?
 
     let productDetailView: ProductDetailViewProtocol
     let getProductTransactionsUseCase: GetProductTransactionsUseCaseProtocol
@@ -35,8 +42,10 @@ class ProductDetailPresenter {
         switch result {
         case .success(let transactionList):
             self.productDetailView.showTransactionList(transactions: transactionList.map { "\($0.0)" + " " + $0.1 })
-        case .failure(let error):
-            print("Error: " + error.localizedDescription)
+        case .failure( _):
+            self.productDetailView.showAlert(title: NSLocalizedString("error", bundle:Bundle(for: ProductDetailPresenter.self), comment: ""), message: NSLocalizedString("product_not_found", bundle:Bundle(for: ProductDetailPresenter.self), comment: ""), buttonTitle: NSLocalizedString("ok", bundle:Bundle(for: ProductDetailPresenter.self), comment: "")) {
+                self.delegate?.onErrorInDetail()
+            }
         }
     }
     
@@ -45,7 +54,14 @@ class ProductDetailPresenter {
         case .success(let transactionTotalValue):
             self.productDetailView.addTotalAmountForThisProduct(totalAmount: "\(transactionTotalValue) " + ProductDetailPresenter.currencyToUseInSum)
         case .failure(let error):
-            print("Error: " + error.localizedDescription)
+            switch error {
+            case .connectionError:
+                self.productDetailView.showAlert(title: NSLocalizedString("error", bundle:Bundle(for: ProductDetailPresenter.self), comment: ""), message: NSLocalizedString("conversion_download_error", bundle:Bundle(for: ProductDetailPresenter.self), comment: ""), buttonTitle: NSLocalizedString("ok", bundle:Bundle(for: ProductDetailPresenter.self), comment: ""), handler: nil)
+            case .productNotFound:
+                self.productDetailView.showAlert(title: NSLocalizedString("error", bundle:Bundle(for: ProductDetailPresenter.self), comment: ""), message: NSLocalizedString("product_not_found", bundle:Bundle(for: ProductDetailPresenter.self), comment: ""), buttonTitle: NSLocalizedString("ok", bundle:Bundle(for: ProductDetailPresenter.self), comment: ""), handler: nil)
+            case .unknownCurrency:
+                self.productDetailView.showAlert(title: NSLocalizedString("error", bundle:Bundle(for: ProductDetailPresenter.self), comment: ""), message: NSLocalizedString("unknown_amount", bundle:Bundle(for: ProductDetailPresenter.self), comment: ""), buttonTitle: NSLocalizedString("ok", bundle:Bundle(for: ProductDetailPresenter.self), comment: ""), handler: nil)
+            }
         }
     }
     
