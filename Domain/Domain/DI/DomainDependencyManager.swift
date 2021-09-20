@@ -11,7 +11,7 @@ import Common
 
 public class DomainDependencyManager {
     public static func setup(container:Container) {
-        container.register(CurrencyConversor.self) { r in
+        container.register(CurrencyConversorProtocol.self) { r in
             CurrencyConversor()
         }.inObjectScope(.container)
         
@@ -24,7 +24,7 @@ public class DomainDependencyManager {
         }
         
         container.register(GetTransactionTotalUseCaseProtocol.self) { r in
-            GetTransactionTotalUseCase(productRepository: r.resolve(ProductRepositoryProtocol.self)!, currencyConversor: r.resolve(CurrencyConversor.self)!, logger: r.resolve(LoggerProtocol.self, name: LogCategory.domain.rawValue)!)
+            GetTransactionTotalUseCase(productRepository: r.resolve(ProductRepositoryProtocol.self)!, currencyConversor: r.resolve(CurrencyConversorProtocol.self)!, logger: r.resolve(LoggerProtocol.self, name: LogCategory.domain.rawValue)!)
         }
     }
 }

@@ -20,7 +20,13 @@ extension CurrencyConversorError: Equatable {
     }
 }
 
-class CurrencyConversor {
+protocol CurrencyConversorProtocol {
+    func convertTransactionList(finalCurrency:String, transactionList: [(amount: Decimal, currency: String)]) throws -> [(amount: Decimal, currency: String)]
+    func areCurrencyRatesCalculated() -> Bool
+    func calculateAllRates(currencyConversions:[CurrencyConversion])
+}
+
+class CurrencyConversor: CurrencyConversorProtocol {
     
     var currencies:[String]
     

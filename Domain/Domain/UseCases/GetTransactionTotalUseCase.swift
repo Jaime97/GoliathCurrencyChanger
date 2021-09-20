@@ -23,10 +23,10 @@ public protocol GetTransactionTotalUseCaseProtocol {
 class GetTransactionTotalUseCase: GetTransactionTotalUseCaseProtocol {
 
     let productRepository: ProductRepositoryProtocol
-    let currencyConversor: CurrencyConversor
+    let currencyConversor: CurrencyConversorProtocol
     let logger: LoggerProtocol
     
-    init(productRepository: ProductRepositoryProtocol, currencyConversor: CurrencyConversor, logger: LoggerProtocol) {
+    init(productRepository: ProductRepositoryProtocol, currencyConversor: CurrencyConversorProtocol, logger: LoggerProtocol) {
         self.productRepository = productRepository
         self.currencyConversor = currencyConversor
         self.logger = logger

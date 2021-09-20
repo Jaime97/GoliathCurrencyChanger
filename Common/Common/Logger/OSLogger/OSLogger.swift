@@ -8,17 +8,17 @@
 import Foundation
 import OSLog
 
-class OSLogger:LoggerProtocol {
+public class OSLogger:LoggerProtocol {
     
     private static var subsystem = Bundle.main.bundleIdentifier ?? "Logger"
     private let logger: Logger
     
     
-    required init(category: LogCategory) {
+    required public init(category: LogCategory) {
         self.logger = Logger(subsystem: Self.subsystem, category: category.rawValue)
     }
     
-    func logDebug(event: String, isPrivate: Bool) {
+    public func logDebug(event: String, isPrivate: Bool) {
         if isPrivate {
             self.logger.debug("\(event, privacy: .private)")
         } else {
@@ -26,7 +26,7 @@ class OSLogger:LoggerProtocol {
         }
     }
     
-    func logError(event: String, isPrivate: Bool) {
+    public func logError(event: String, isPrivate: Bool) {
         if isPrivate {
             self.logger.error("\(event, privacy: .private)")
         } else {
@@ -34,7 +34,7 @@ class OSLogger:LoggerProtocol {
         }
     }
     
-    func logInfo(event: String, isPrivate: Bool) {
+    public func logInfo(event: String, isPrivate: Bool) {
         if isPrivate {
             self.logger.info("\(event, privacy: .private)")
         } else {
